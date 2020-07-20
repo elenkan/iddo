@@ -61,16 +61,61 @@
     <section class="portfolio">
       <h2 class="portfolio__title">OUR WORKS</h2>
       <ul class="portfolio-list">
-        <li class="portfolio-list__item">All</li>
-        <li class="portfolio-list__item">Website</li>
-        <li class="portfolio-list__item">Branding</li>
+        <li class="portfolio-list__item"><button class="portfolio-list__button">All</button></li>
+        <li class="portfolio-list__item"><button class="portfolio-list__button">Website</button></li>
+        <li class="portfolio-list__item"><button class="portfolio-list__button">Branding</button></li>
       </ul>
-      <ul> <!-- подумать как реализовать -->
-        <li><p>Name Project</p></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+      <div class="project-list">
+        <article class="project-list__item">
+          <img src="#" class="project-list__image">
+          <div class="project-list__info">
+            <span class="project-list__title">Name preject</span>
+            <span class="project-list__author">designed by Authour | May 23, 2014</span>
+          </div>
+        </article>
+        <article class="project-list__item">
+          <img src="#" class="project-list__image">
+          <div class="project-list__info">
+            <span class="project-list__title">Name preject</span>
+            <span class="project-list__author">designed by Authour | May 23, 2014</span>
+          </div>
+        </article>
+        <article class="project-list__item">
+          <img src="#" class="project-list__image">
+          <div class="project-list__info">
+            <span class="project-list__title">Name preject</span>
+            <span class="project-list__author">designed by Authour | May 23, 2014</span>
+          </div>
+        </article>
+        <article class="project-list__item">
+          <img src="#" class="project-list__image">
+          <div class="project-list__info">
+            <span class="project-list__title">Name preject</span>
+            <span class="project-list__author">designed by Authour | May 23, 2014</span>
+          </div>
+        </article>
+        <article class="project-list__item">
+          <img src="#" class="project-list__image">
+          <div class="project-list__info">
+            <span class="project-list__title">Name preject</span>
+            <span class="project-list__author">designed by Authour | May 23, 2014</span>
+          </div>
+        </article>
+        <article class="project-list__item">
+          <img src="#" class="project-list__image">
+          <div class="project-list__info">
+            <span class="project-list__title">Name preject</span>
+            <span class="project-list__author">designed by Authour | May 23, 2014</span>
+          </div>
+        </article>
+        <article class="project-list__item">
+          <img src="#" class="project-list__image">
+          <div class="project-list__info">
+            <span class="project-list__title">Name preject</span>
+            <span class="project-list__author">designed by Authour | May 23, 2014</span>
+          </div>
+        </article>                                              
+      </div>
       <button class="portfolio__button">plus</button>
     </section>
     <section class="feedback">
@@ -114,11 +159,16 @@
           <span class="team-list__position">Designer</span>
           <p class="team-list__description">Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim!</p>
         </li>
-        <li class="team-list__member-name">
+        <li>
           <h3 class="team-list__member-name">Justin West</h3>
           <span class="team-list__position">Manager</span>
           <p class="team-list__description">Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
         </li>
+        <li>
+          <h3 class="team-list__member-name">Justin West</h3>
+          <span class="team-list__position">Manager</span>
+          <p class="team-list__description">Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        </li>        
       </ul>
       <button>Показать еще</button>
     </section>
@@ -176,11 +226,13 @@
         <p class="skills-list__text"></p>
       </div>
     </section>
-    <form class="subscribe-form" action="#" method="post">
-      <label for="subscribe-form__email">Введите электронную почту</label>
-      <input id="subscribe-form__email" type="email" name="user-email" placeholder="Enter your e-mail here...">
-      <button class="subscribe-form__btn">Subscribe</button>
-    </form>
+    <section class="subscribe">
+      <form class="subscribe-form" action="#" method="post">
+        <label for="subscribe-form__email">Введите электронную почту</label>
+        <input id="subscribe-form__email" type="email" name="user-email" placeholder="Enter your e-mail here...">
+        <button class="subscribe-form__btn">Subscribe</button>
+      </form>
+    </section>
     <section class="clients">
       <h2>Clients</h2>
       <ul class="clients-list">
@@ -204,11 +256,11 @@
       </div>
       <form class="contact-form" action="#" method="post">
         <label for="contact-form__email"></label>
-        <input id="contact-form__email" type="email" name="person-email" placeholder="Email">
+        <input class="contact-form__input" id="contact-form__email" type="email" name="person-email" placeholder="Email">
         <label for="contact-form__person-name"></label>
-        <input id="contact-form__person-name" type="text" name="person-name" placeholder="Name">
+        <input class="contact-form__input" id="contact-form__person-name" type="text" name="person-name" placeholder="Name">
         <label for="contact-form__person-message"></label>
-        <input id="contact-form__person-message" type="text" name="person-message" placeholder="Message">
+        <input  class="contact-form__input" id="contact-form__person-message" type="text" name="person-message" placeholder="Message">
         <button class="contact-form__btn">Submit</button>
       </form>
     </section>

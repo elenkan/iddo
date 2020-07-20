@@ -1,0 +1,22 @@
+.statistics {
+	background-color: @main-grey-color;
+}
+.statistics-list {
+	list-style: none;
+	.flex-mixin();
+}
+.statistics-list__item {
+	.flex-mixin(@flex-direction:column);
+	font-family: @font;
+	font-weight: lighter;
+    line-height: 41px;
+    color: @main-text-color;
+}
+.statistics-list__number {
+	font-size: 72px;
+}
+
+.statistics-list__text {
+	text-transform: uppercase;
+	font-size: 18px;
+}

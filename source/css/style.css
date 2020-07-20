@@ -1,2 +1,264 @@
+.page-header {
+  color: #ffffff;
+  font-family: Proxima Nova, Arial, sans-serif;
+  background-color: #000000;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.site-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.site-list_item a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Proxima Nova, Arial, sans-serif;
+}
+.user-email {
+  border: 2px solid #ca3c3c;
+  color: #ca3c3c;
+  border-radius: 10px;
+  width: 86px;
+  height: 31px;
+}
+.services {
+  background-color: #ca3c3c;
+  color: #ffffff;
+  display: flex;
+  width: 1600px;
+  height: 350px;
+}
+.services-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services-list__item {
+  width: 380px;
+}
+.portfolio {
+  background-color: #ebebeb;
+}
+.portfolio-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 291px;
+}
+.portfolio-list__button {
+  border: 2px solid #ca3c3c;
+  border-radius: 10px;
+  width: 86px;
+  height: 31px;
+}
+.project-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.project-list__item {
+  width: 373px;
+  height: 360px;
+  background-color: #cccccc;
+  margin-right: 33px;
+  margin-bottom: 30px;
+}
+.project-list__info {
+  background-color: #ffffff;
+}
+.project-list__title {
+  font-family: Proxima Nova, Arial, sans-serif;
+  color: #ca3c3c;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+.project-list__author {
+  font-family: Proxima Nova, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 60px;
+  color: #898989;
+}
+.feedback {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.feedback-post {
+  font-family: Proxima Nova, Arial, sans-serif;
+  font-size: 36px;
+  line-height: 41px;
+  font-weight: lighter;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.feedback-post__user-name {
+  font-size: 16px;
+  line-height: 41px;
+  font-style: normal;
+}
+.feedback__slider {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.team-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.team-list__member-name {
+  font-size: 18px;
+  font-family: Proxima Nova, Arial, sans-serif;
+  color: #ca3c3c;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+.team-list__position {
+  font-size: 14px;
+  font-family: Proxima Nova, Arial, sans-serif;
+  color: #898989;
+  line-height: 60px;
+}
+.team-list__description {
+  font-size: 14px;
+  font-family: Proxima Nova, Arial, sans-serif;
+  font-weight: lighter;
+  color: #363636;
+  line-height: 22px;
+}
+.statistics {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.statistics-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.statistics-list__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: Proxima Nova, Arial, sans-serif;
+  font-weight: lighter;
+  line-height: 41px;
+  color: #ffffff;
+}
+.statistics-list__number {
+  font-size: 72px;
+}
+.statistics-list__text {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: Proxima Nova, Arial, sans-serif;
+}
+.skills__title {
+  font-size: 18px;
+  font-family: Proxima Nova, Arial, sans-serif;
+  color: #ca3c3c;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+.skills__description {
+  font-weight: lighter;
+  font-size: 14px;
+  line-height: 22px;
+  width: 200px;
+}
+.skills-list__btn {
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  width: 368px;
+  height: 48px;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-family: Proxima Nova, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 22px;
+  color: #898989;
+}
+.skills-list__text {
+  font-size: 14px;
+  font-family: Proxima Nova, Arial, sans-serif;
+  font-weight: lighter;
+  line-height: 22px;
+}
+.subscribe {
+  background-color: #ca3c3c;
+}
+.contacts {
+  background-color: #ebebeb;
+}
+.contacts__adress,
+.contacts__phone-and-email {
+  font-family: Proxima Nova, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  color: #898989;
+}
+.contact-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #363636;
+}
+.contact-form__input {
+  border: 2px solid #363636;
+  width: 366px;
+  height: 46px;
+  font-size: 16px;
+  font-family: "FontAwesome";
+  text-transform: uppercase;
+  line-height: 60px;
+}
+.contact-form__btn {
+  font-size: 16px;
+  font-family: Proxima Nova, Arial, sans-serif;
+  color: #ca3c3c;
+  line-height: 41px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
+  width: 370px;
+  height: 80px;
+  z-index: 13;
+}
+.page-footer {
+  background-color: #000000;
+  font-family: Proxima Nova, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #555555;
+  text-align: center;
+}
 
 /*# sourceMappingURL=style.css.map */

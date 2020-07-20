@@ -1,0 +1,46 @@
+.portfolio {
+	background-color: @light-grey-color;
+}
+
+.portfolio-list {
+	list-style: none;
+	.flex-mixin();
+	width: 291px;
+}
+
+.portfolio-list__button {
+  border: 2px solid @main-red-color;
+  border-radius: 10px;
+  width: 86px;
+  height: 31px;
+}
+.project-list {
+	.flex-mixin();
+}
+.project-list__item {
+	width: 373px;
+	height: 360px;
+	background-color: @light-grey-bg-color;
+	margin-right: 33px;
+	margin-bottom: 30px;
+}
+.project-list__info {
+	background-color: @main-text-color;
+}
+.project-list__title {
+	font-family: @font;
+	color:@main-red-color;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 60px;
+	text-transform: uppercase;
+}
+.project-list__author {
+  font-family: @font;	
+  font-size: 14px;
+  line-height: 60px;
+  color: @author-text-color;
+}
+
+
+
