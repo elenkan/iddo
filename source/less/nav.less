@@ -2,24 +2,41 @@
 color: @main-text-color;
 font-family: @font;
 background-color: @main-black-color;
-.flex-mixin();
+.flex-mixin(@justify-content:flex-start);
+padding: 0 calc(50% - 585px);
+padding-bottom: 15px;
+}
+.site-logo {
+	margin-right: 86px;
 }
 
 .site-list {
 	list-style: none;
     .flex-mixin();
+    margin-right: 422px;
 }
 
-.site-list_item a {
+.site-list_item {
+	margin-right: 40px; 
+	a {
 	text-decoration: none;
 	color: @main-text-color;
     font-family: @font;
+    font-size: 16px;
+    line-height: 19px;
+    }
 }
 
 .user-email {
-	border: 2px solid @main-red-color;
-	color: @main-red-color;
-   border-radius: 10px;
-  width: 86px;
-  height: 31px;
+	border: 2px solid #ca3c3c;
+    color: #ca3c3c;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 91px;
+    height: 35px;
+    align-self: center;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    padding-left: 14px;
+    padding-right: 9px;
 }
