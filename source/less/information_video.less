@@ -1,0 +1,35 @@
+.information-video {
+    background-color: @main-grey-color;
+    padding: 0 calc(50% - 585px);
+    .flex-mixin(@justify-content:flex-start);
+    align-items: center;
+    height: 820px;
+    position: relative;
+
+    &__text {
+      font-size: 60px;
+      font-family: @font;
+      color: @main-text-color;
+      font-weight: lighter;
+      line-height: 72px;
+      margin-top: -27px;
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: @font;
+    color: @main-red-color;
+    position:relative;
+    right: 764px;
+    top: 4px;
+}
+&__button {
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: -75px;
+    margin-left: -6px;
+}
+}
