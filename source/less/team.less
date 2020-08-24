@@ -1,6 +1,26 @@
+.team {
+  padding: 0 calc(50% - 585px);
+}
+
 .team-list {
 	list-style: none;
 	.flex-mixin();
+  position:relative;
+}
+.team-list__item {
+  .flex-mixin(@flex-direction:column);
+  width: 360px;
+  margin-right: -30px;
+  position: relative;
+}
+.team-list__member-photo{
+  border-radius: 50%;
+  background-color: @light-grey-bg-color;
+  width: 170px;
+  height: 170px;
+  position: relative;
+  right: 37px;
+  margin-bottom: 29px;
 }
 .team-list__member-name {
   font-size: 18px;
@@ -8,14 +28,29 @@
   color: @main-red-color;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 60px;
+  line-height: 18px;
+  align-self: center;
+    width: 241px;
+    margin-bottom: 11px;
+}
+
+.team__title {
+    color: @main-black-color;
+    margin-bottom: 80px;
+  width: 370px;
+  padding-top: 35px;
+  &:after {
+    border-bottom: 10px solid @main-black-color;
+  }
 }
 
 .team-list__position {
   font-size: 14px;
   font-family: @font;
   color: @author-text-color;
-  line-height: 60px;
+  line-height: 14px;
+  align-self: center;
+    width: 241px;
 }
 
 .team-list__description {
@@ -24,4 +59,45 @@
   font-weight: lighter;
   color: @color;
   line-height: 22px;
+  width: 263px;
+  align-self: center;
+  margin-top: 25px;
+  margin-left: 26px;
+  margin-bottom: 30px;
+}
+
+.team__button {
+  margin-left: 2px;
+}
+
+.team-list__contacts {
+  position: absolute;
+  top: 63px;
+  left: 64px;
+  .flex-mixin();
+  width: 170px;
+  list-style: none;
+  z-index: 10;
+}
+
+.team-list__twitter-contact {
+  background: url(../img/twitter.svg) no-repeat; 
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.team-list__facebook-contact {
+  background: url(../img/facebook.svg) no-repeat; 
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.team-list__instagram-contact {
+  background: url(../img/instagram.svg) no-repeat; 
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.non-visible {
+  display: none;
 }

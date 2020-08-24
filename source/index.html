@@ -37,7 +37,7 @@
        <a href="#" class="information-video__link">Click to play video</a>
      </section>
     <section class="services">
-      <h2 class="services__title">OUR SERVICES.</h2>
+      <h2 class="services__title main-title">Our services.</h2>
       <ul class="services-list">
         <li class="services-list__item">
           <h3 class="services-list__title">Feature 1</h3>
@@ -56,16 +56,17 @@
           <p class="services-list__description">Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         </li>
       </ul>
-      <ul class="services__icon-list">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+      <ul class="icon-list">
+        <li class="icon-list__item"><a class="icon-list__item--bulb" href="#"></a></li>
+        <li class="icon-list__item"><a class="icon-list__item--globe" href="#"></a> </li>
+        <li class="icon-list__item"><a class="icon-list__item--camera" href="#"></a> </li>
+        <li class="icon-list__item"><a class="icon-list__item--spanner" href="#"></a> </li>
+        <li class="icon-list__item"><a class="icon-list__item--mic" href="#"></a> </li>
+        <li class="icon-list__item"><a class="icon-list__item--banknote" href="#"></a> </li>
       </ul>
     </section>
     <section class="portfolio">
-      <h2 class="portfolio__title">OUR WORKS</h2>
+      <h2 class="portfolio__title main-title">Our works.</h2>
       <ul class="portfolio-list">
         <li class="portfolio-list__item"><button class="portfolio-list__button">All</button></li>
         <li class="portfolio-list__item"><button class="portfolio-list__button">Website</button></li>
@@ -81,63 +82,63 @@
         </article>
         <article class="project-list__item">
           <img src="#" class="project-list__image">
-          <div class="project-list__info">
+          <div class="project-list__info non-visible">
             <span class="project-list__title">Name preject</span>
             <span class="project-list__author">designed by Authour | May 23, 2014</span>
           </div>
         </article>
         <article class="project-list__item">
           <img src="#" class="project-list__image">
-          <div class="project-list__info">
+          <div class="project-list__info non-visible">
             <span class="project-list__title">Name preject</span>
             <span class="project-list__author">designed by Authour | May 23, 2014</span>
           </div>
         </article>
         <article class="project-list__item">
           <img src="#" class="project-list__image">
-          <div class="project-list__info">
+          <div class="project-list__info non-visible">
             <span class="project-list__title">Name preject</span>
             <span class="project-list__author">designed by Authour | May 23, 2014</span>
           </div>
         </article>
         <article class="project-list__item">
           <img src="#" class="project-list__image">
-          <div class="project-list__info">
+          <div class="project-list__info non-visible">
             <span class="project-list__title">Name preject</span>
             <span class="project-list__author">designed by Authour | May 23, 2014</span>
           </div>
         </article>
         <article class="project-list__item">
           <img src="#" class="project-list__image">
-          <div class="project-list__info">
+          <div class="project-list__info non-visible">
             <span class="project-list__title">Name preject</span>
             <span class="project-list__author">designed by Authour | May 23, 2014</span>
           </div>
         </article>
-        <article class="project-list__item">
+        <article class="project-list__item non-visible">
           <img src="#" class="project-list__image">
-          <div class="project-list__info">
+          <div class="project-list__info non-visible">
             <span class="project-list__title">Name preject</span>
             <span class="project-list__author">designed by Authour | May 23, 2014</span>
           </div>
         </article>                                              
       </div>
-      <button class="portfolio__button">plus</button>
+      <button class="portfolio__button show-button"></button>
     </section>
     <section class="feedback">
         <blockquote class="feedback-post">
           <p class="feedback-post__text">“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiamvoluptatem.”</p>
-          <img class="feedback-post__user-img" src="#" alt="Фото пользователя">
+          <img class="feedback-post__user-img" src="../img/client-photo.png" width="70" height="70" alt="Фото пользователя">
           <cite class="feedback-post__user-name">Jack Efron</cite>
         </blockquote>
-        <blockquote class="feedback-post">
+        <blockquote class="feedback-post non-visible">
           <p class="feedback-post__text">“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiamvoluptatem.”</p>
-          <img class="feedback-post__user-img" src="#" alt="Фото пользователя">
+          <img class="feedback-post__user-img" src="../img/client-photo.png" width="70" height="70"alt="Фото пользователя">
           <cite class="feedback-post__user-name">Jack Efron</cite>
         </blockquote>
-        <blockquote class="feedback-post">
+        <blockquote class="feedback-post non-visible">
           <p class="feedback-post__text">“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiamvoluptatem.”</p>
-          <img class="feedback-post__user-img" src="#" alt="Фото пользователя">
+          <img class="feedback-post__user-img" src="../img/client-photo.png" width="70" height="70"alt="Фото пользователя">
           <cite class="feedback-post__user-name">Jack Efron</cite>
         </blockquote>
         <ul class="feedback__slider">
@@ -151,32 +152,56 @@
             <button class="feedback__button"></button>
           </li>
         </ul>
-      </section>
+    </section>
     <section class="team">
-      <h2 class="team__title">OUR TEAM</h2>
+      <h2 class="team__title main-title">Our team.</h2>
       <ul class="team-list">
         <li class="team-list__item">
+          <ul class="team-list__contacts">
+            <li><a class="team-list__twitter-contact" href="#"></a></li>
+            <li><a class="team-list__facebook-contact" href="#"></a></li>
+            <li><a class="team-list__instagram-contact" href="#"></a></li>
+          </ul>
+          <div class="team-list__member-photo"></div>
           <h3 class="team-list__member-name">Michael Joe</h3>
           <span class="team-list__position">CEO & Founder</span>
           <p class="team-list__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
         </li>
-        <li>
+        <li class="team-list__item">
+          <ul class="team-list__contacts">
+            <li><a class="team-list__twitter-contact" href="#"></a></li>
+            <li><a class="team-list__facebook-contact" href="#"></a></li>
+            <li><a class="team-list__instagram-contact" href="#"></a></li>
+          </ul>
+          <div class="team-list__member-photo"></div>
           <h3 class="team-list__member-name">Jeremy scott</h3>
           <span class="team-list__position">Designer</span>
           <p class="team-list__description">Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim!</p>
         </li>
-        <li>
+        <li class="team-list__item">
+          <ul class="team-list__contacts">
+            <li><a class="team-list__twitter-contact" href="#"></a></li>
+            <li><a class="team-list__facebook-contact" href="#"></a></li>
+            <li><a class="team-list__instagram-contact" href="#"></a></li>
+          </ul>
+          <div class="team-list__member-photo"></div>
           <h3 class="team-list__member-name">Justin West</h3>
           <span class="team-list__position">Manager</span>
           <p class="team-list__description">Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
         </li>
-        <li>
+        <li class="team-list__item non-visible">
+          <ul class="team-list__contacts">
+            <li><a class="team-list__twitter-contact" href="#"></a></li>
+            <li><a class="team-list__facebook-contact" href="#"></a></li>
+            <li><a class="team-list__instagram-contact" href="#"></a></li>
+          </ul>
+          <div class="team-list__member-photo"></div>
           <h3 class="team-list__member-name">Justin West</h3>
           <span class="team-list__position">Manager</span>
           <p class="team-list__description">Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
         </li>        
       </ul>
-      <button>Показать еще</button>
+      <button class=" team__button show-button"></button>
     </section>
     <section class="statistics">
       <ul class="statistics-list">

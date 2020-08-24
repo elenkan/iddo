@@ -1,16 +1,130 @@
 .services {
 	background-color: @main-red-color;
 	color: @main-text-color;
-	display: flex;
+	.flex-mixin(@flex-wrap:no-wrap);
 	@font-family: @font;
-	width: 1600px;
-	height: 350px;
+	min-height: 350px;
+	padding: 0 calc(50% - 585px);
+	position:relative;
+	margin-bottom: 150px;
+	padding-bottom: 10px;
+}
+
+.services__title {
+	margin-top: 44px;
 }
 .services-list {
 	list-style: none;
    .flex-mixin();
+   width: 770px;
+    padding-left: 13px;
+&__title {
+	font-family: @font;
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+    margin-left: 49px;
+    margin-top: 33px;
+    margin-bottom: 0;
+}
+ &__description {
+  margin-left: 49px;
+    margin-top: 7px;
+    width: 250px;
+    font-family: @font;
+   font-size: 14px;
+   line-height: 22px;
+	font-weight: lighter;
+}
 }
 
+
 .services-list__item {
-	width: 380px;
+	width: 247px;
+	margin-right: 40px;
+	position: relative;
+
+	&:before {
+		content: "";
+		display: block;
+		width: 96px; 
+		height: 96px;
+		position: absolute;
+		}
+	&:first-child:before {
+		background-image: url(../img/white-black-icon.png); 
+		background-position: -4px -109px;
+        top: 36px;
+        right: 230px;
+	}
+		&:nth-child(2):before {
+		background-image: url(../img/white-black-icon.png); 
+		background-position: -4px -209px;
+        top: 36px;
+        right: 230px;
+	}
+		&:nth-child(3):before {
+		background-image: url(../img/white-black-icon.png); 
+		background-position: -4px -409px;
+        top: 36px;
+        right: 230px;
+	}
+		&:last-child:before {
+		background-image: url(../img/white-black-icon.png); 
+		background-position: -4px -309px;
+        top: 36px;
+        right: 230px;
+	}
 }
+
+.icon-list {
+	list-style: none;
+	position:absolute;
+	width: 1024px;
+	top: 402px;
+	.flex-mixin();
+}
+
+.icon-list__item--bulb {
+	display: block;
+		width: 39px; 
+		height: 32px;
+		background-image: url(../img/red-icon-sprite.png); 
+		background-position: -4px -247px;
+	}
+.icon-list__item--globe {
+	display: block;
+		width: 31px; 
+		height: 31px;
+		background-image: url(../img/red-icon-sprite.png); 
+		background-position: -4px -103px;
+	}
+.icon-list__item--camera {
+	display: block;
+		width: 36px; 
+		height: 32px;
+		background-image: url(../img/red-icon-sprite.png); 
+		background-position: -4px -30px;
+	}
+.icon-list__item--spanner {
+	display: block;
+		width: 33px; 
+		height: 33px;
+		background-image: url(../img/red-icon-sprite.png); 
+		background-position: -4px -66px;
+	}
+.icon-list__item--mic {
+	display: block;
+		width: 23px; 
+		height: 34px;
+		background-image: url(../img/red-icon-sprite.png); 
+		background-position: -4px -209px;
+	}
+.icon-list__item--banknote {
+	display: block;
+		width: 39px; 
+		height: 26px;
+		background-image: url(../img/red-icon-sprite.png); 
+		background-position: -4px 0px;
+	}						
