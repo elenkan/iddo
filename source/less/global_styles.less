@@ -23,3 +23,20 @@ img {
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
+
+.main-title {
+  font-size: 72px;
+  font-family: @font;
+  color: @main-text-color;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 58px;
+
+  &:after {
+    content: "";
+    display: block;
+    margin-top: 9px;
+    border-bottom: 10px solid @main-text-color;
+    width: 370px;
+  }
+}

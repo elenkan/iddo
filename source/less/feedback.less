@@ -1,5 +1,7 @@
 .feedback {
 	background-color: @main-grey-color;
+	padding: 0 calc(50% - 585px);
+	margin-top: -51px;
 }
 .feedback-post {
 	font-family: @font;
@@ -7,16 +9,44 @@
 	line-height: 41px;
 	font-weight: lighter;
 	color: @main-text-color;
-	.flex-mixin();
+	.flex-mixin(@flex-direction:column);
+	align-items: center;
+	margin-left: 198px;
+    margin-top: 50px;
+    width: 775px;
+    text-align: center;
 }
 
+.feedback-post__text {
+	padding-top: 16px;
+	margin-bottom: 16px;
+}
 .feedback-post__user-name {
 	font-size: 16px;
 	line-height: 41px;
+	font-weight: bold;
 	font-style: normal;
+	text-transform: uppercase;
+	margin-top: -4px;
 }
 
 .feedback__slider {
 	list-style: none;
 	.flex-mixin(@justify-content:center);
+	padding-bottom: 12px;
+    position: relative;
+    bottom: 19px;
+    right: 25px;
+}
+
+.feedback__button {
+display: block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	border: 2px solid @main-text-color;
+	background-color: transparent;
+}
+.non-visible {
+  display: none;
 }
