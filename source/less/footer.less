@@ -1,8 +1,55 @@
 .page-footer {
-	background-color: @main-black-color;
-	font-family: @font;
-	font-size: 14px;
-	line-height: 22px;
-	color: @color-1;
-	text-align: center;
+  align-items: center;
+  padding: 0 calc(50% - 585px);
+  padding-top: 47px;
+  padding-bottom: 15px;
+
+  font-size: 14px;
+  line-height: 22px;
+  font-family: @font;
+  text-align: center;
+  color: @color-1;
+
+  background-color: @main-black-color;
+
+  .flex-mixin(@flex-direction: column);
+}
+
+.site-logo--footer {
+  margin-right: 0;
+}
+
+.page-footer__rights {
+  margin-bottom: 0;
+}
+
+.page-footer__creater {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.page-footer__arrow {
+  position: relative;
+
+  display: block;
+  width: 25px;
+  height: 25px;
+
+  background-color: transparent;
+  border: none;
+
+  &:before {
+    content: "";
+
+    display: block;
+    width: 13px;
+    height: 13px;
+
+    background-color: transparent;
+    border-top: 2px solid @main-red-color;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-left: 2px solid @main-red-color;
+    transform: rotate(45deg);
+  }
 }
