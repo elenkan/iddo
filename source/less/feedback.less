@@ -1,51 +1,71 @@
 .feedback {
-	background-color: @main-grey-color;
-	padding: 0 calc(50% - 585px);
-	margin-top: -51px;
+  margin-top: -51px;
+  padding: 0 calc(50% - 585px);
+
+  background-color: @main-grey-color;
 }
 .feedback-post {
-	font-family: @font;
-	font-size: 36px;
-	line-height: 41px;
-	font-weight: lighter;
-	color: @main-text-color;
-	.flex-mixin(@flex-direction:column);
-	align-items: center;
-	margin-left: 198px;
-    margin-top: 50px;
-    width: 775px;
-    text-align: center;
+  align-items: center;
+  width: 775px;
+  margin-top: 50px;
+  margin-left: 198px;
+
+  font-weight: lighter;
+  font-size: 36px;
+  line-height: 41px;
+  font-family: @font;
+  text-align: center;
+  color: @main-text-color;
+
+  .flex-mixin(@flex-direction: column);
 }
 
 .feedback-post__text {
-	padding-top: 16px;
-	margin-bottom: 16px;
+  margin-bottom: 16px;
+  padding-top: 14px;
 }
 .feedback-post__user-name {
-	font-size: 16px;
-	line-height: 41px;
-	font-weight: bold;
-	font-style: normal;
-	text-transform: uppercase;
-	margin-top: -4px;
+  margin-top: -4px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 41px;
+  text-transform: uppercase;
 }
 
 .feedback__slider {
-	list-style: none;
-	.flex-mixin(@justify-content:center);
-	padding-bottom: 12px;
-    position: relative;
-    bottom: 19px;
-    right: 25px;
+  position: relative;
+  right: 15px;
+  bottom: 21px;
+
+  padding-bottom: 9px;
+
+  list-style: none;
+
+  .flex-mixin(@justify-content: center);
 }
 
-.feedback__button {
-display: block;
-	width: 6px;
-	height: 6px;
-	border-radius: 50%;
-	border: 2px solid @main-text-color;
-	background-color: transparent;
+.feedback__one-button,
+.feedback__two-button,
+.feedback__three-button {
+  display: block;
+  width: 11px;
+  height: 10px;
+  margin-right: 10px;
+  padding: 0;
+
+  background-color: transparent;
+  border: 2px solid @main-text-color;
+  border-radius: 50%;
+  &:hover {
+    background-color: @main-text-color;
+    cursor: pointer;
+  }
+}
+
+.feedback__button--active {
+  background-color: @main-text-color;
 }
 .non-visible {
   display: none;

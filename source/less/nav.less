@@ -1,42 +1,53 @@
 .page-header {
-color: @main-text-color;
-font-family: @font;
-background-color: @main-black-color;
-.flex-mixin(@justify-content:flex-start);
-padding: 0 calc(50% - 585px);
-padding-bottom: 15px;
+  padding: 0 calc(50% - 585px);
+  padding-bottom: 15px;
+
+  font-family: @font;
+  color: @main-text-color;
+
+  background-color: @main-black-color;
+
+  .flex-mixin(@justify-content: flex-start);
 }
+
 .site-logo {
-	margin-right: 86px;
+  margin-right: 86px;
 }
 
 .site-list {
-	list-style: none;
-    .flex-mixin();
-    margin-right: 422px;
+  margin-right: 428px;
+
+  list-style: none;
+
+  .flex-mixin();
 }
 
 .site-list_item {
-	margin-right: 40px; 
-	a {
-	text-decoration: none;
-	color: @main-text-color;
-    font-family: @font;
+  margin-right: 39px;
+  a {
     font-size: 16px;
     line-height: 19px;
-    }
+    font-family: @font;
+    color: @main-text-color;
+    text-decoration: none;
+  }
 }
 
-.user-email {
-	border: 2px solid #ca3c3c;
-    color: #ca3c3c;
-    background-color: transparent;
-    border-radius: 10px;
-    width: 91px;
-    height: 35px;
-    align-self: center;
-    padding-bottom: 8px;
-    padding-top: 5px;
-    padding-left: 14px;
-    padding-right: 9px;
+.user-email__link {
+  display: block;
+  align-self: center;
+  width: 86px;
+  height: 18px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+
+  font-size: 16px;
+  line-height: 19px;
+  font-family: @font;
+  text-align: center;
+  color: #ca3c3c;
+  text-decoration: none;
+
+  border: 2px solid #ca3c3c;
+  border-radius: 10px;
 }

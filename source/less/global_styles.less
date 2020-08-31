@@ -25,18 +25,21 @@ img {
 }
 
 .main-title {
+  font-weight: bold;
   font-size: 72px;
+  line-height: 60px;
   font-family: @font;
   color: @main-text-color;
-  font-weight: bold;
   text-transform: uppercase;
-  line-height: 58px;
 
   &:after {
     content: "";
+
     display: block;
-    margin-top: 9px;
-    border-bottom: 10px solid @main-text-color;
     width: 370px;
+    margin-top: 6px;
+    margin-left: 3px;
+
+    border-bottom: 10px solid @main-text-color;
   }
 }
