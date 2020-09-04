@@ -1,11 +1,11 @@
 .team {
-  padding: 0 calc(50% - 585px);
+  padding: 0 calc(50% - 600px);
 }
 
 .team-list {
   position: relative;
 
-  width: 1200px;
+  padding: 0 calc(50% - 600px);
 
   list-style: none;
 
@@ -21,8 +21,8 @@
 
   &:hover .team-list__contacts {
     position: absolute;
-    top: 61px;
-    left: 59px;
+    top: 59px;
+    left: 100px;
     z-index: 10;
 
     width: 170px;
@@ -35,7 +35,7 @@
 
 .team-list__member-photo {
   position: relative;
-  right: 40px;
+  right: 1px;
 
   width: 170px;
   height: 170px;
@@ -46,8 +46,8 @@
 }
 
 .team-list__member-name {
-  align-self: center;
-  width: 241px;
+  align-self: flex-end;
+  width: 263px;
   margin-bottom: 11px;
 
   font-weight: bold;
@@ -64,15 +64,15 @@
   margin-left: -2px;
   padding-top: 33px;
 
-  color: @main-black-color;
+  color: @black-color;
   &:after {
-    border-bottom: 10px solid @main-black-color;
+    border-bottom: 10px solid @black-color;
   }
 }
 
 .team-list__position {
-  align-self: center;
-  width: 241px;
+  align-self: flex-end;
+  width: 263px;
 
   font-size: 14px;
   line-height: 14px;
@@ -81,17 +81,17 @@
 }
 
 .team-list__description {
-  align-self: center;
+  align-self: flex-end;
   width: 263px;
-  margin-top: 23px;
+  margin-top: 21px;
   margin-bottom: 30px;
-  margin-left: 26px;
+  margin-left: 100px;
 
   font-weight: lighter;
   font-size: 14px;
   line-height: 22px;
   font-family: @font;
-  color: @color;
+  color: @darken-grey-color;
 }
 
 .team__button {
@@ -126,8 +126,4 @@
   height: 50px;
 
   background: url(../img/instagram.svg) no-repeat;
-}
-
-.non-visible {
-  display: none;
 }

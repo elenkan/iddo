@@ -1,5 +1,5 @@
 .contacts {
-  padding: 0 calc(50% - 585px);
+  padding: 0 calc(50% - 600px);
 
   background-color: @light-grey-color;
 
@@ -29,17 +29,17 @@
   margin-left: -2px;
   padding-top: 93px;
 
-  color: @main-black-color;
+  color: @black-color;
   &:after {
-    border-bottom: 10px solid @main-black-color;
+    border-bottom: 10px solid @black-color;
   }
 }
 
 .contact-form {
   margin-bottom: 141px;
-  padding: 0 calc(50% - 585px);
+  padding: 0 calc(50% - 600px);
 
-  color: @color;
+  color: @darken-grey-color;
 
   .flex-mixin(@justify-content: left);
 
@@ -50,8 +50,8 @@
   &__label-email:before {
     content: "";
     position: absolute;
-    top: 18px;
-    left: 21px;
+    top: 17px;
+    right: 364px;
     z-index: 10;
 
     display: block;
@@ -61,11 +61,12 @@
     background-image: url(../img/white-black-icon.png);
     background-position: -126px -109px;
   }
+
   &__label-name:before {
     content: "";
     position: absolute;
-    top: 18px;
-    left: 21px;
+    top: 17px;
+    right: 339px;
     z-index: 10;
 
     display: block;
@@ -79,8 +80,8 @@
   &__label-message:before {
     content: "";
     position: absolute;
-    top: 98px;
-    right: 731px;
+    top: 48px;
+    right: 762px;
     z-index: 10;
 
     display: block;
@@ -99,7 +100,7 @@
   height: 44px;
   padding-left: 37px;
 
-  border: 2px solid @color;
+  border: 2px solid @darken-grey-color;
 
   &:first-of-type {
     margin-right: 28px;
@@ -109,44 +110,68 @@
     width: 726px;
     margin-top: 30px;
     margin-right: 31px;
-    padding-bottom: 32px;
+    padding-bottom: 30px;
   }
-
 
   &::-webkit-input-placeholder {
     font-weight: bold;
     font-size: 16px;
-    line-height: 60px;
+    line-height: 40px;
     font-family: @font;
-    color: @main-black-color;
+    color: @black-color;
     text-transform: uppercase;
   }
 
   &::-moz-placeholder {
     font-weight: bold;
     font-size: 16px;
-    line-height: 60px;
+    line-height: 40px;
     font-family: @font;
-    color: @main-black-color;
+    vertical-align: middle;
+    color: @black-color;
     text-transform: uppercase;
   }
 
   &:-moz-placeholder {
     font-weight: bold;
     font-size: 16px;
-    line-height: 60px;
+    line-height: 40px;
     font-family: @font;
-    color: @main-black-color;
+    color: @black-color;
     text-transform: uppercase;
   }
 
-  &:-ms-input-placeholde {
+  &:-ms-input-placeholder {
     font-weight: bold;
     font-size: 16px;
-    line-height: 60px;
+    line-height: 40px;
     font-family: @font;
-    color: @main-black-color;
+    color: @black-color;
     text-transform: uppercase;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus {
+    border: 2px solid #ff3c00;
+    outline: none;
+  }
+  &:focus + label {
+    display: none;
   }
 }
 
@@ -164,9 +189,11 @@
   text-align: center;
   color: @main-red-color;
 
-  background-color: @main-text-color;
+  background-color: @white-color;
   border: none;
   border-radius: 10px;
+
+  cursor: pointer;
 
   &:before {
     content: "";
@@ -184,7 +211,7 @@
   }
 }
 
-.social-list__contacts {
+.social-list {
   width: 234px;
   margin-top: 5px;
   margin-bottom: 42px;

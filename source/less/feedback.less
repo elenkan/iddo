@@ -1,6 +1,6 @@
 .feedback {
   margin-top: -51px;
-  padding: 0 calc(50% - 585px);
+  padding: 0 calc(50% - 600px);
 
   background-color: @main-grey-color;
 }
@@ -15,15 +15,17 @@
   line-height: 41px;
   font-family: @font;
   text-align: center;
-  color: @main-text-color;
+  color: @white-color;
 
   .flex-mixin(@flex-direction: column);
 }
 
 .feedback-post__text {
+  width: 775px;
   margin-bottom: 16px;
   padding-top: 14px;
 }
+
 .feedback-post__user-name {
   margin-top: -4px;
 
@@ -36,8 +38,8 @@
 
 .feedback__slider {
   position: relative;
-  right: 15px;
-  bottom: 21px;
+  right: 31px;
+  bottom: 23px;
 
   padding-bottom: 9px;
 
@@ -56,17 +58,14 @@
   padding: 0;
 
   background-color: transparent;
-  border: 2px solid @main-text-color;
+  border: 2px solid @white-color;
   border-radius: 50%;
   &:hover {
-    background-color: @main-text-color;
+    background-color: @white-color;
     cursor: pointer;
   }
 }
 
-.feedback__button--active {
-  background-color: @main-text-color;
-}
-.non-visible {
-  display: none;
+.feedback__button-active {
+  background-color: @white-color;
 }
