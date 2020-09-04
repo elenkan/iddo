@@ -7,10 +7,11 @@
 
 .subscribe-form-email {
   width: 360px;
-  height: 80px;
-  margin-top: 6px;
-  margin-right: 118px;
-  margin-left: -3px;
+  height: 72px;
+  margin-top: 1px;
+  margin-right: 117px;
+  margin-left: -18px;
+  padding-top: 10px;
 
   background-color: transparent;
   border: none;
@@ -20,7 +21,7 @@
     font-size: 36px;
     line-height: 41px;
     font-family: @font;
-    color: @main-text-color;
+    color: @white-color;
   }
 
   &::-moz-placeholder {
@@ -28,7 +29,7 @@
     font-size: 36px;
     line-height: 41px;
     font-family: @font;
-    color: @main-text-color;
+    color: @white-color;
   }
 
   &:-moz-placeholder {
@@ -36,15 +37,38 @@
     font-size: 36px;
     line-height: 41px;
     font-family: @font;
-    color: @main-text-color;
+    color: @white-color;
   }
 
-  &:-ms-input-placeholde {
+  &:-ms-input-placeholder {
     font-weight: lighter;
     font-size: 36px;
     line-height: 41px;
     font-family: @font;
-    color: @main-text-color;
+    color: @white-color;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus {
+    height: 64px;
+
+    border: 2px solid #ff3c00;
+    outline: none;
   }
 }
 
@@ -59,7 +83,8 @@
   text-align: center;
   color: @main-red-color;
 
-  background-color: @main-text-color;
+  background-color: @white-color;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }

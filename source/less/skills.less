@@ -2,12 +2,13 @@
   position: relative;
 
   margin-bottom: 121px;
-  padding: 0 calc(50% - 585px);
+  padding: 0 calc(50% - 600px);
 
   font-family: @font;
 
   .flex-mixin(@justify-content: flex-start);
 }
+
 .skills__main-title {
   width: 370px;
   margin-right: 500px;
@@ -15,11 +16,12 @@
   margin-left: -2px;
   padding-top: 19px;
 
-  color: @main-black-color;
+  color: @black-color;
   &:after {
-    border-bottom: 10px solid @main-black-color;
+    border-bottom: 10px solid @black-color;
   }
 }
+
 .skills__title {
   width: 670px;
   margin-top: 22px;
@@ -32,6 +34,7 @@
   color: @main-red-color;
   text-transform: uppercase;
 }
+
 .skills__description {
   margin-top: -19px;
   margin-left: 100px;
@@ -70,7 +73,7 @@
   text-align: left;
   color: @author-text-color;
 
-  background-color: @main-text-color;
+  background-color: @white-color;
   border: 1px solid @light-grey-color;
   border-radius: 10px;
 }
@@ -165,7 +168,4 @@
     background-color: @author-text-color;
     transform: rotate(90deg);
   }
-}
-.non-visible {
-  display: none;
 }

@@ -1,5 +1,5 @@
 .portfolio {
-  padding: 0 calc(50% - 585px);
+  padding: 0 calc(50% - 600px);
 
   background-color: @light-grey-color;
 }
@@ -8,9 +8,9 @@
   width: 370px;
   padding-top: 93px;
 
-  color: @main-black-color;
+  color: @black-color;
   &:after {
-    border-bottom: 10px solid @main-black-color;
+    border-bottom: 10px solid @black-color;
   }
 }
 
@@ -37,13 +37,9 @@
 
   border: 2px solid @main-red-color;
   border-radius: 10px;
-
-  &:hover {
-    color: @main-text-color;
-
-    background-color: @main-red-color;
-  }
+  cursor: pointer;
 }
+
 
 .show-button {
   width: 30px;
@@ -61,7 +57,7 @@
   cursor: pointer;
 }
 .project-list {
-  width: 1200px;
+  padding: 0 calc(50% - 600px);
 
   .flex-mixin(@justify-content: flex-start);
 }
@@ -79,11 +75,12 @@
   &:hover .project-list__info {
     align-items: center;
 
-    background-color: @main-text-color;
+    background-color: @white-color;
 
     .flex-mixin(@flex-direction: column);
   }
 }
+
 
 .project-list__info {
   display: none;
