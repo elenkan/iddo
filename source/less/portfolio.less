@@ -6,7 +6,7 @@
 
 .portfolio__title {
   width: 370px;
-  padding-top: 93px;
+  padding-top: 96px;
 
   color: @black-color;
   &:after {
@@ -14,10 +14,16 @@
   }
 }
 
+.project-list__image {
+  width: 370px;
+  height: 370px;
+  object-fit: cover;
+}
+
 .portfolio-list {
   width: 291px;
   margin-top: -30px;
-  margin-bottom: 62px;
+  margin-bottom: 59px;
   padding-left: 0;
 
   list-style: none;
@@ -37,7 +43,11 @@
 
   border: 2px solid @main-red-color;
   border-radius: 10px;
-  cursor: pointer;
+
+  &--active {
+    background-color: @main-red-color;
+    color: @white-color;
+  }
 }
 
 
@@ -67,6 +77,7 @@
   height: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+  position: relative;
 
   background-color: @light-grey-bg-color;
 
@@ -74,10 +85,14 @@
 
   &:hover .project-list__info {
     align-items: center;
+    position: absolute;
+    bottom:0;
+    height: 100px;
+    width: 370px;
 
     background-color: @white-color;
 
-    .flex-mixin(@flex-direction: column);
+    .flex-mixin(@justify-content: center);
   }
 }
 
@@ -92,10 +107,9 @@
   margin-left: 4px;
   padding-top: 27px;
 
-  font-weight: bold;
   font-size: 18px;
   line-height: 18px;
-  font-family: @font;
+  font-family: @font-bold;
   color: @main-red-color;
   text-transform: uppercase;
 }
@@ -103,9 +117,10 @@
 .project-list__author {
   display: block;
   margin-bottom: 29px;
+  text-align: center;
 
   font-size: 14px;
   line-height: 14px;
-  font-family: @font;
+  font-family: @font-thin;
   color: @author-text-color;
 }

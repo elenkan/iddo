@@ -10,34 +10,31 @@
   .flex-mixin(@justify-content: flex-start);
 
   &__text {
-    margin-top: -27px;
+    position: relative;
+    bottom: 42px;
 
-    font-weight: lighter;
     font-size: 60px;
     line-height: 72px;
-    font-family: @font;
+    font-family: @font-thin;
     color: @white-color;
+
+    &:after {
+      content: "Click to play video";
+      position: absolute;
+      top: 100%;
+      left: 2px;
+
+      font-size: 16px;
+      font-family: @font;
+      line-height: 19px;
+      color: @main-red-color;
+    }
   }
 
-  &__link {
-    position: relative;
-    top: 4px;
-    right: 764px;
-
-    font-size: 16px;
-    line-height: 19px;
-    font-family: @font;
-    color: @main-red-color;
-    text-decoration: none;
-  }
 
   &__button {
-    margin-top: -75px;
-    margin-right: 30px;
-    margin-left: -6px;
-
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+    margin-right: 36px;
+        margin-top: -79px;
   }
 }
+
