@@ -1,11 +1,33 @@
 body {
   display: block;
+  font-family: @font;
+  min-width: 1200px;
 }
 
 img {
   max-width: 100%;
   height: auto;
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 
 .visually-hidden {
   position: absolute;
@@ -25,10 +47,10 @@ img {
 }
 
 .main-title {
-  font-weight: bold;
+  width: 370px;
   font-size: 72px;
   line-height: 60px;
-  font-family: @font;
+  font-family: @font-bold;
   color: @white-color;
   text-transform: uppercase;
 
@@ -36,10 +58,10 @@ img {
     content: "";
 
     display: block;
-    width: 370px;
-    margin-top: 6px;
+    margin-top: 2px;
     margin-left: 3px;
 
     border-bottom: 10px solid @white-color;
   }
 }
+

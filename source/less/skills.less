@@ -14,7 +14,7 @@
   margin-right: 500px;
   margin-bottom: 61px;
   margin-left: -2px;
-  padding-top: 19px;
+  padding-top: 21px;
 
   color: @black-color;
   &:after {
@@ -27,10 +27,9 @@
   margin-top: 22px;
   margin-left: 99px;
 
-  font-weight: bold;
   font-size: 18px;
   line-height: 60px;
-  font-family: @font;
+  font-family: @font-bold;
   color: @main-red-color;
   text-transform: uppercase;
 }
@@ -58,40 +57,84 @@
 
 .skills-list__item {
   margin-bottom: 11px;
+
+  &[open] .skills-list__btn {
+    color: @main-red-color;
+  }
+
+  &[open] .skills-list__sign {
+  left: 286px;
+
+  width: 6px;
+  height: 1px;
+
+  background-color: @main-red-color;
+
+  &:before {
+    display: none;
+  }
+
+  }
 }
+
 .skills-list__btn {
   position: relative;
 
   width: 370px;
   height: 49px;
-  padding-left: 57px;
+  padding-left: 59px;
+  padding-top: 14px;
 
-  font-weight: bold;
   font-size: 14px;
   line-height: 22px;
-  font-family: @font;
+  font-family: @font-bold;
   text-align: left;
   color: @author-text-color;
 
   background-color: @white-color;
   border: 1px solid @light-grey-color;
   border-radius: 10px;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
 }
 
-.skills-list__btn--active {
-  color: @main-red-color;
+.skills-list__sign {
+  position: relative;
+  bottom: 11px;
+  left: 284px;
+
+  display: block;
+  width: 7px;
+  height: 1px;
+
+  background-color: @author-text-color;
+  &:before {
+    content: "";
+
+    display: block;
+    width: 7px;
+    height: 1px;
+
+    background-color: @author-text-color;
+    transform: rotate(90deg);
+  }
 }
+
+// .skills-list__btn--active {
+//   color: @main-red-color;
+// }
 
 .skills-list__text {
   width: 322px;
-  margin-top: 14px;
-  margin-bottom: 15px;
-  margin-left: 20px;
+  margin-top: 16px;
+  margin-bottom: 13px;
+  margin-left: 21px;
 
-  font-weight: lighter;
   font-size: 14px;
   line-height: 22px;
-  font-family: @font;
+  font-family: @font-thin;
 }
 
 .skills__img {
@@ -122,50 +165,17 @@
 .skills__statistics {
   margin-top: 20px;
   margin-bottom: 6px;
-  margin-left: -38px;
 
   list-style: none;
 
   .flex-mixin();
 }
-.skills-list_open-sign {
-  position: relative;
-  bottom: 11px;
-  left: 286px;
-
-  display: block;
-  width: 6px;
-  height: 1px;
-
-  background-color: @main-red-color;
-}
 
 .skills-list__img {
   position: absolute;
   top: 12px;
-  left: 18px;
+  left: 20px;
 
   fill: @main-red-color;
 }
 
-.skills-list_close-sign {
-  position: relative;
-  bottom: 11px;
-  left: 284px;
-
-  display: block;
-  width: 7px;
-  height: 1px;
-
-  background-color: @author-text-color;
-  &:before {
-    content: "";
-
-    display: block;
-    width: 7px;
-    height: 1px;
-
-    background-color: @author-text-color;
-    transform: rotate(90deg);
-  }
-}

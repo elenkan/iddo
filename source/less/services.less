@@ -4,92 +4,81 @@
   min-height: 350px;
   margin-bottom: 150px;
   padding: 0 calc(50% - 600px);
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 
   font-family: @font;
   color: @white-color;
 
   background-color: @main-red-color;
 
-  .flex-mixin(@flex-wrap: nowrap);
+  .flex-mixin(@justify-content: flex-start);
 }
 
 
 .services__title {
-  margin-top: 44px;
+  margin-top: 46px;
   margin-left: -3px;
+  margin-right: 30px;
 }
 
 .services-list {
   width: 770px;
 
-  list-style: none;
-
-  .flex-mixin();
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 35px;
 
   &__title {
-    margin-top: 33px;
-    margin-bottom: 0;
-    margin-left: 21px;
-
-    font-weight: bold;
     font-size: 16px;
     line-height: 30px;
-    font-family: @font;
+    font-family: @font-bold;
     text-transform: uppercase;
   }
 
   &__description {
     width: 250px;
-    margin-top: 7px;
-    margin-left: 22px;
-
-    font-weight: lighter;
+    margin-top: -10px;
     font-size: 14px;
     line-height: 22px;
-    font-family: @font;
+    font-family: @font-thin;
   }
 }
 
 .services-list__item {
-  position: relative;
 
-  width: 247px;
-  margin-right: 44px;
+  width: 370px;
+  padding-left: 134px;
+    margin-right: 30px;
+    position: relative;
+    margin-bottom: 52px;
+
+  &:nth-child(even) {
+    margin-right: 0px;
+  }
 
   &:before {
     content: "";
     position: absolute;
+    top: 16px;
+    right: 268px;
 
     display: block;
     width: 96px;
     height: 96px;
   }
   &:first-child:before {
-    top: 35px;
-    right: 257px;
-
     background-image: url(../img/white-black-icon.png);
     background-position: -4px -109px;
   }
   &:nth-child(2):before {
-    top: 35px;
-    right: 257px;
-
     background-image: url(../img/white-black-icon.png);
     background-position: -4px -209px;
   }
   &:nth-child(3):before {
-    top: 36px;
-    right: 257px;
-
     background-image: url(../img/white-black-icon.png);
     background-position: -4px -409px;
   }
   &:last-child:before {
-    top: 36px;
-    right: 257px;
-
     background-image: url(../img/white-black-icon.png);
     background-position: -4px -309px;
   }
@@ -97,8 +86,8 @@
 
 .icon-list {
   position: absolute;
-  top: 402px;
-  left: 77px;
+  top: 419px;
+  left: 75px;
 
   padding: 0 calc(50% - 600px);
 
