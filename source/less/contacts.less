@@ -12,10 +12,12 @@
   line-height: 30px;
   font-family: @font;
   color: @author-text-color;
+  font-style: normal;
 }
 
 .contacts__adress {
   margin-bottom: 0;
+  margin-top: 16px;
 }
 
 .contacts__phone-and-email {
@@ -27,7 +29,7 @@
   margin-top: 0;
   margin-bottom: 17px;
   margin-left: -2px;
-  padding-top: 93px;
+  padding-top: 97px;
 
   color: @black-color;
   &:after {
@@ -36,7 +38,7 @@
 }
 
 .contact-form {
-  margin-bottom: 141px;
+  margin-bottom: 144px;
   padding: 0 calc(50% - 600px);
 
   color: @darken-grey-color;
@@ -66,7 +68,7 @@
     content: "";
     position: absolute;
     top: 17px;
-    right: 339px;
+    right: 338px;
     z-index: 10;
 
     display: block;
@@ -80,8 +82,8 @@
   &__label-message:before {
     content: "";
     position: absolute;
-    top: 48px;
-    right: 762px;
+    top: 47px;
+    right: 764px;
     z-index: 10;
 
     display: block;
@@ -96,56 +98,53 @@
 .contact-form__input {
   position: relative;
 
-  width: 328px;
-  height: 44px;
-  padding-left: 37px;
+  width: 370px;
+  height: 50px;
+  padding-left: 33px;
 
   border: 2px solid @darken-grey-color;
 
   &:first-of-type {
-    margin-right: 28px;
+    margin-right: 31px;
+    padding-left: 37px;
   }
 
   &--message {
-    width: 726px;
+    width: 770px;
+    height: 78px;
     margin-top: 30px;
-    margin-right: 31px;
-    padding-bottom: 30px;
+    padding-top: 4px;
   }
 
   &::-webkit-input-placeholder {
-    font-weight: bold;
     font-size: 16px;
     line-height: 40px;
-    font-family: @font;
+    font-family: @font-bold;
     color: @black-color;
     text-transform: uppercase;
   }
 
   &::-moz-placeholder {
-    font-weight: bold;
     font-size: 16px;
     line-height: 40px;
-    font-family: @font;
+    font-family: @font-bold;
     vertical-align: middle;
     color: @black-color;
     text-transform: uppercase;
   }
 
   &:-moz-placeholder {
-    font-weight: bold;
     font-size: 16px;
     line-height: 40px;
-    font-family: @font;
+    font-family: @font-bold;
     color: @black-color;
     text-transform: uppercase;
   }
 
   &:-ms-input-placeholder {
-    font-weight: bold;
     font-size: 16px;
     line-height: 40px;
-    font-family: @font;
+    font-family: @font-bold;
     color: @black-color;
     text-transform: uppercase;
   }
@@ -181,7 +180,8 @@
   align-self: flex-end;
   width: 370px;
   height: 80px;
-  padding-left: 50px;
+  padding-left: 43px;
+  padding-top: 5px;
 
   font-size: 16px;
   line-height: 41px;
@@ -193,13 +193,11 @@
   border: none;
   border-radius: 10px;
 
-  cursor: pointer;
-
   &:before {
     content: "";
     position: absolute;
-    top: 23px;
-    left: 142px;
+    top: 25px;
+    left: 140px;
     z-index: 10;
 
     display: block;

@@ -304,12 +304,42 @@ template {
 [hidden] {
   display: none;
 }
+@font-face {
+  font-family: "Proxima Nova Regular";
+  src: local("Proxima Nova Regular"), url("../fonts/ProximaNova-Regular.woff2"), url("../fonts/ProximaNova-Regular.woff");
+}
+@font-face {
+  font-family: "Proxima Nova Thin";
+  src: local("Proxima Nova Thin"), url("../fonts/ProximaNovaT-Thin.woff2"), url("../fonts/ProximaNovaT-Thin.woff");
+}
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: local("Proxima Nova Bold"), url("../fonts/ProximaNova-Bold.woff2"), url("../fonts/ProximaNova-Bold.woff");
+}
 body {
   display: block;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
+  min-width: 1200px;
 }
 img {
   max-width: 100%;
   height: auto;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .visually-hidden {
   position: absolute;
@@ -325,25 +355,24 @@ img {
           clip-path: inset(100%);
 }
 .main-title {
-  font-weight: bold;
+  width: 370px;
   font-size: 72px;
   line-height: 60px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   color: #ffffff;
   text-transform: uppercase;
 }
 .main-title:after {
   content: "";
   display: block;
-  width: 370px;
-  margin-top: 6px;
+  margin-top: 2px;
   margin-left: 3px;
   border-bottom: 10px solid #ffffff;
 }
 .page-header {
   padding: 0 calc(50% - 600px);
-  padding-bottom: 15px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  padding-bottom: 23px;
+  padding-top: 23px;
   color: #ffffff;
   background-color: #000000;
   display: flex;
@@ -353,11 +382,12 @@ img {
 }
 .site-logo {
   align-self: center;
-  margin-right: 86px;
+  margin-right: 84px;
 }
 .site-list {
   margin-right: 428px;
-  list-style: none;
+  margin-top: 9px;
+  margin-left: 42px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -369,20 +399,17 @@ img {
 .site-list_item a {
   font-size: 16px;
   line-height: 19px;
-  font-family: Proxima Nova, Arial, sans-serif;
   color: #ffffff;
   text-decoration: none;
 }
 .page-header__subscribe-link {
   display: block;
   align-self: center;
-  width: 86px;
-  height: 18px;
+  width: 90px;
+  height: 35px;
   padding-top: 7px;
-  padding-bottom: 8px;
   font-size: 16px;
   line-height: 19px;
-  font-family: Proxima Nova, Arial, sans-serif;
   text-align: center;
   color: #ca3c3c;
   text-decoration: none;
@@ -401,116 +428,104 @@ img {
   justify-content: flex-start;
 }
 .information-video__text {
-  margin-top: -27px;
-  font-weight: lighter;
+  position: relative;
+  bottom: 42px;
   font-size: 60px;
   line-height: 72px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Thin, Arial, sans-serif;
   color: #ffffff;
 }
-.information-video__link {
-  position: relative;
-  top: 4px;
-  right: 764px;
+.information-video__text:after {
+  content: "Click to play video";
+  position: absolute;
+  top: 100%;
+  left: 2px;
   font-size: 16px;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   line-height: 19px;
-  font-family: Proxima Nova, Arial, sans-serif;
   color: #ca3c3c;
-  text-decoration: none;
 }
 .information-video__button {
-  margin-top: -75px;
-  margin-right: 30px;
-  margin-left: -6px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  margin-right: 36px;
+  margin-top: -79px;
 }
 .services {
   position: relative;
   min-height: 350px;
   margin-bottom: 150px;
   padding: 0 calc(50% - 600px);
-  padding-bottom: 10px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  padding-bottom: 5px;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   color: #ffffff;
   background-color: #ca3c3c;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .services__title {
-  margin-top: 44px;
+  margin-top: 46px;
   margin-left: -3px;
+  margin-right: 30px;
 }
 .services-list {
   width: 770px;
-  list-style: none;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin-top: 35px;
 }
 .services-list__title {
-  margin-top: 33px;
-  margin-bottom: 0;
-  margin-left: 21px;
-  font-weight: bold;
   font-size: 16px;
   line-height: 30px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   text-transform: uppercase;
 }
 .services-list__description {
   width: 250px;
-  margin-top: 7px;
-  margin-left: 22px;
-  font-weight: lighter;
+  margin-top: -10px;
   font-size: 14px;
   line-height: 22px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Thin, Arial, sans-serif;
 }
 .services-list__item {
+  width: 370px;
+  padding-left: 134px;
+  margin-right: 30px;
   position: relative;
-  width: 247px;
-  margin-right: 44px;
+  margin-bottom: 52px;
+}
+.services-list__item:nth-child(even) {
+  margin-right: 0px;
 }
 .services-list__item:before {
   content: "";
   position: absolute;
+  top: 16px;
+  right: 268px;
   display: block;
   width: 96px;
   height: 96px;
 }
 .services-list__item:first-child:before {
-  top: 35px;
-  right: 257px;
   background-image: url(../img/white-black-icon.png);
   background-position: -4px -109px;
 }
 .services-list__item:nth-child(2):before {
-  top: 35px;
-  right: 257px;
   background-image: url(../img/white-black-icon.png);
   background-position: -4px -209px;
 }
 .services-list__item:nth-child(3):before {
-  top: 36px;
-  right: 257px;
   background-image: url(../img/white-black-icon.png);
   background-position: -4px -409px;
 }
 .services-list__item:last-child:before {
-  top: 36px;
-  right: 257px;
   background-image: url(../img/white-black-icon.png);
   background-position: -4px -309px;
 }
 .icon-list {
   position: absolute;
-  top: 402px;
-  left: 77px;
+  top: 419px;
+  left: 75px;
   padding: 0 calc(50% - 600px);
   list-style: none;
   display: flex;
@@ -574,16 +589,22 @@ img {
 }
 .portfolio__title {
   width: 370px;
-  padding-top: 93px;
+  padding-top: 96px;
   color: #000000;
 }
 .portfolio__title:after {
   border-bottom: 10px solid #000000;
 }
+.project-list__image {
+  width: 370px;
+  height: 370px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .portfolio-list {
   width: 291px;
   margin-top: -30px;
-  margin-bottom: 62px;
+  margin-bottom: 59px;
   padding-left: 0;
   list-style: none;
   display: flex;
@@ -596,12 +617,15 @@ img {
   height: 36px;
   font-size: 16px;
   line-height: 19px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   text-align: center;
   color: #ca3c3c;
   border: 2px solid #ca3c3c;
   border-radius: 10px;
-  cursor: pointer;
+}
+.portfolio-list__button--active {
+  background-color: #ca3c3c;
+  color: #ffffff;
 }
 .show-button {
   width: 30px;
@@ -627,6 +651,7 @@ img {
   height: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+  position: relative;
   background-color: #cccccc;
   display: flex;
   flex-direction: column;
@@ -635,11 +660,15 @@ img {
 }
 .project-list__item:hover .project-list__info {
   align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 370px;
   background-color: #ffffff;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .project-list__info {
   display: none;
@@ -649,19 +678,19 @@ img {
   margin-bottom: 14px;
   margin-left: 4px;
   padding-top: 27px;
-  font-weight: bold;
   font-size: 18px;
   line-height: 18px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   color: #ca3c3c;
   text-transform: uppercase;
 }
 .project-list__author {
   display: block;
   margin-bottom: 29px;
+  text-align: center;
   font-size: 14px;
   line-height: 14px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Thin, Arial, sans-serif;
   color: #898989;
 }
 .feedback {
@@ -674,10 +703,9 @@ img {
   width: 775px;
   margin-top: 50px;
   margin-left: 198px;
-  font-weight: lighter;
   font-size: 36px;
   line-height: 41px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Thin, Arial, sans-serif;
   text-align: center;
   color: #ffffff;
   display: flex;
@@ -687,21 +715,28 @@ img {
 }
 .feedback-post__text {
   width: 775px;
-  margin-bottom: 16px;
-  padding-top: 14px;
+  margin-bottom: 14px;
+  padding-top: 16px;
 }
 .feedback-post__user-name {
   margin-top: -4px;
   font-style: normal;
-  font-weight: bold;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   font-size: 16px;
   line-height: 41px;
   text-transform: uppercase;
 }
+.feedback-post__user-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .feedback__slider {
   position: relative;
-  right: 31px;
-  bottom: 23px;
+  right: 11px;
+  bottom: 22px;
   padding-bottom: 9px;
   list-style: none;
   display: flex;
@@ -735,6 +770,7 @@ img {
 }
 .team-list {
   position: relative;
+  margin-bottom: 17px;
   padding: 0 calc(50% - 600px);
   list-style: none;
   display: flex;
@@ -753,8 +789,8 @@ img {
 }
 .team-list__item:hover .team-list__contacts {
   position: absolute;
-  top: 59px;
-  left: 100px;
+  top: 62px;
+  left: 140px;
   z-index: 10;
   width: 170px;
   list-style: none;
@@ -768,18 +804,24 @@ img {
   right: 1px;
   width: 170px;
   height: 170px;
-  margin-bottom: 29px;
+  margin-bottom: 31px;
   background-color: #cccccc;
   border-radius: 50%;
+}
+.team-list__member-photo img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .team-list__member-name {
   align-self: flex-end;
   width: 263px;
   margin-bottom: 11px;
-  font-weight: bold;
   font-size: 18px;
   line-height: 18px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   color: #ca3c3c;
   text-transform: uppercase;
 }
@@ -787,7 +829,7 @@ img {
   width: 370px;
   margin-bottom: 80px;
   margin-left: -2px;
-  padding-top: 33px;
+  padding-top: 36px;
   color: #000000;
 }
 .team__title:after {
@@ -798,23 +840,23 @@ img {
   width: 263px;
   font-size: 14px;
   line-height: 14px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   color: #898989;
 }
 .team-list__description {
   align-self: flex-end;
-  width: 263px;
+  width: 270px;
   margin-top: 21px;
   margin-bottom: 30px;
   margin-left: 100px;
   font-weight: lighter;
   font-size: 14px;
   line-height: 22px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   color: #363636;
 }
 .team__button {
-  margin-bottom: 124px;
+  margin-bottom: 125px;
   cursor: pointer;
 }
 .team-list__contacts {
@@ -858,7 +900,7 @@ img {
   margin-right: 30px;
   font-weight: lighter;
   line-height: 41px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -894,20 +936,21 @@ img {
   margin-bottom: 7px;
   font-size: 72px;
   line-height: 41px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Thin, Arial, sans-serif;
 }
 .statistics-list__text {
   font-weight: bold;
   font-size: 18px;
   line-height: 41px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   text-transform: uppercase;
+  margin-left: 0;
 }
 .skills {
   position: relative;
   margin-bottom: 121px;
   padding: 0 calc(50% - 600px);
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -918,7 +961,7 @@ img {
   margin-right: 500px;
   margin-bottom: 61px;
   margin-left: -2px;
-  padding-top: 19px;
+  padding-top: 21px;
   color: #000000;
 }
 .skills__main-title:after {
@@ -928,10 +971,9 @@ img {
   width: 670px;
   margin-top: 22px;
   margin-left: 99px;
-  font-weight: bold;
   font-size: 18px;
   line-height: 60px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   color: #ca3c3c;
   text-transform: uppercase;
 }
@@ -956,33 +998,61 @@ img {
 .skills-list__item {
   margin-bottom: 11px;
 }
+.skills-list__item[open] .skills-list__btn {
+  color: #ca3c3c;
+}
+.skills-list__item[open] .skills-list__sign {
+  left: 286px;
+  width: 6px;
+  height: 1px;
+  background-color: #ca3c3c;
+}
+.skills-list__item[open] .skills-list__sign:before {
+  display: none;
+}
 .skills-list__btn {
   position: relative;
   width: 370px;
   height: 49px;
-  padding-left: 57px;
-  font-weight: bold;
+  padding-left: 59px;
+  padding-top: 14px;
   font-size: 14px;
   line-height: 22px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   text-align: left;
   color: #898989;
   background-color: #ffffff;
   border: 1px solid #ebebeb;
   border-radius: 10px;
 }
-.skills-list__btn--active {
-  color: #ca3c3c;
+.skills-list__btn::-webkit-details-marker {
+  display: none;
+}
+.skills-list__sign {
+  position: relative;
+  bottom: 11px;
+  left: 284px;
+  display: block;
+  width: 7px;
+  height: 1px;
+  background-color: #898989;
+}
+.skills-list__sign:before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 1px;
+  background-color: #898989;
+  transform: rotate(90deg);
 }
 .skills-list__text {
   width: 322px;
-  margin-top: 14px;
-  margin-bottom: 15px;
-  margin-left: 20px;
-  font-weight: lighter;
+  margin-top: 16px;
+  margin-bottom: 13px;
+  margin-left: 21px;
   font-size: 14px;
   line-height: 22px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Thin, Arial, sans-serif;
 }
 .skills__img {
   position: relative;
@@ -997,7 +1067,7 @@ img {
   font-weight: bold;
   font-size: 18px;
   line-height: 60px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   color: #ca3c3c;
 }
 .skills__information-block {
@@ -1007,44 +1077,17 @@ img {
 .skills__statistics {
   margin-top: 20px;
   margin-bottom: 6px;
-  margin-left: -38px;
   list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.skills-list_open-sign {
-  position: relative;
-  bottom: 11px;
-  left: 286px;
-  display: block;
-  width: 6px;
-  height: 1px;
-  background-color: #ca3c3c;
-}
 .skills-list__img {
   position: absolute;
   top: 12px;
-  left: 18px;
+  left: 20px;
   fill: #ca3c3c;
-}
-.skills-list_close-sign {
-  position: relative;
-  bottom: 11px;
-  left: 284px;
-  display: block;
-  width: 7px;
-  height: 1px;
-  background-color: #898989;
-}
-.skills-list_close-sign:before {
-  content: "";
-  display: block;
-  width: 7px;
-  height: 1px;
-  background-color: #898989;
-  transform: rotate(90deg);
 }
 .subscribe {
   height: 80px;
@@ -1055,38 +1098,34 @@ img {
   width: 360px;
   height: 72px;
   margin-top: 1px;
-  margin-right: 117px;
+  margin-right: 121px;
   margin-left: -18px;
-  padding-top: 10px;
+  padding-top: 20px;
   background-color: transparent;
   border: none;
 }
 .subscribe-form-email::-webkit-input-placeholder {
-  font-weight: lighter;
   font-size: 36px;
   line-height: 41px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Thin, Arial, sans-serif;
   color: #ffffff;
 }
 .subscribe-form-email::-moz-placeholder {
-  font-weight: lighter;
   font-size: 36px;
   line-height: 41px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Thin, Arial, sans-serif;
   color: #ffffff;
 }
 .subscribe-form-email:-moz-placeholder {
-  font-weight: lighter;
   font-size: 36px;
   line-height: 41px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Thin, Arial, sans-serif;
   color: #ffffff;
 }
 .subscribe-form-email:-ms-input-placeholder {
-  font-weight: lighter;
   font-size: 36px;
   line-height: 41px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Thin, Arial, sans-serif;
   color: #ffffff;
 }
 .subscribe-form-email:focus::-webkit-input-placeholder {
@@ -1111,7 +1150,7 @@ img {
   height: 35px;
   font-size: 16px;
   line-height: 19px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   vertical-align: super;
   text-align: center;
   color: #ca3c3c;
@@ -1123,7 +1162,7 @@ img {
 .clients {
   padding: 0 calc(50% - 485px);
   padding-top: 10px;
-  padding-bottom: 13px;
+  padding-bottom: 28px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .clients-list {
@@ -1185,11 +1224,13 @@ img {
 .contacts__phone-and-email {
   font-size: 16px;
   line-height: 30px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   color: #898989;
+  font-style: normal;
 }
 .contacts__adress {
   margin-bottom: 0;
+  margin-top: 16px;
 }
 .contacts__phone-and-email {
   margin-top: 0;
@@ -1199,14 +1240,14 @@ img {
   margin-top: 0;
   margin-bottom: 17px;
   margin-left: -2px;
-  padding-top: 93px;
+  padding-top: 97px;
   color: #000000;
 }
 .contacts__title:after {
   border-bottom: 10px solid #000000;
 }
 .contact-form {
-  margin-bottom: 141px;
+  margin-bottom: 144px;
   padding: 0 calc(50% - 600px);
   color: #363636;
   display: flex;
@@ -1233,7 +1274,7 @@ img {
   content: "";
   position: absolute;
   top: 17px;
-  right: 339px;
+  right: 338px;
   z-index: 10;
   display: block;
   width: 14px;
@@ -1244,8 +1285,8 @@ img {
 .contact-form__label-message:before {
   content: "";
   position: absolute;
-  top: 48px;
-  right: 762px;
+  top: 47px;
+  right: 764px;
   z-index: 10;
   display: block;
   width: 18px;
@@ -1255,50 +1296,47 @@ img {
 }
 .contact-form__input {
   position: relative;
-  width: 328px;
-  height: 44px;
-  padding-left: 37px;
+  width: 370px;
+  height: 50px;
+  padding-left: 33px;
   border: 2px solid #363636;
 }
 .contact-form__input:first-of-type {
-  margin-right: 28px;
+  margin-right: 31px;
+  padding-left: 37px;
 }
 .contact-form__input--message {
-  width: 726px;
+  width: 770px;
+  height: 78px;
   margin-top: 30px;
-  margin-right: 31px;
-  padding-bottom: 30px;
+  padding-top: 4px;
 }
 .contact-form__input::-webkit-input-placeholder {
-  font-weight: bold;
   font-size: 16px;
   line-height: 40px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
 }
 .contact-form__input::-moz-placeholder {
-  font-weight: bold;
   font-size: 16px;
   line-height: 40px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   vertical-align: middle;
   color: #000000;
   text-transform: uppercase;
 }
 .contact-form__input:-moz-placeholder {
-  font-weight: bold;
   font-size: 16px;
   line-height: 40px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
 }
 .contact-form__input:-ms-input-placeholder {
-  font-weight: bold;
   font-size: 16px;
   line-height: 40px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
 }
@@ -1326,22 +1364,22 @@ img {
   align-self: flex-end;
   width: 370px;
   height: 80px;
-  padding-left: 50px;
+  padding-left: 43px;
+  padding-top: 5px;
   font-size: 16px;
   line-height: 41px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   text-align: center;
   color: #ca3c3c;
   background-color: #ffffff;
   border: none;
   border-radius: 10px;
-  cursor: pointer;
 }
 .contact-form__btn:before {
   content: "";
   position: absolute;
-  top: 23px;
-  left: 142px;
+  top: 25px;
+  left: 140px;
   z-index: 10;
   display: block;
   width: 31px;
@@ -1415,7 +1453,7 @@ img {
   padding-bottom: 15px;
   font-size: 14px;
   line-height: 22px;
-  font-family: Proxima Nova, Arial, sans-serif;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   text-align: center;
   color: #555555;
   background-color: #000000;
