@@ -144,11 +144,11 @@
 
   text-align: right;
 
-  & span {
-    position: absolute;
-    top: 56px;
-    left: 73px;
-    z-index: 10;
+  & text {
+    // position: absolute;
+    // top: 56px;
+    // left: 73px;
+    //z-index: 10;
 
     font-weight: bold;
     font-size: 18px;
@@ -177,5 +177,39 @@
   left: 20px;
 
   fill: @main-red-color;
+}
+
+@keyframes move {
+  to {
+    stroke: @main-red-color;
+    stroke-width:10;
+    stroke-dasharray: 400.35 133;
+  }
+}
+
+@keyframes moved {
+  to {
+    stroke: @main-red-color;
+    stroke-width:10;
+    stroke-dasharray: 133.45 400;
+  }
+}
+
+@keyframes moven {
+  to {
+    stroke: @main-red-color;
+    stroke-width:10;
+    stroke-dasharray: 266.9 266.9;
+  }
+}
+
+.skills__img--75 {
+  animation: move 2s ease forwards;
+}
+.skills__img--25 {
+  animation: moved 2s ease forwards;
+}
+.skills__img--50 {
+  animation: moven 2s ease forwards;
 }
 

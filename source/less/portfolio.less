@@ -50,22 +50,23 @@
   }
 }
 
-
+.portfolio__button {
+  margin-bottom: 140px;
+}
 .show-button {
   width: 30px;
   height: 31px;
-
   background-color: transparent;
-  background-image: url(../img/red-icon-sprite.png);
-  background-position: -4px -174px;
   border: none;
+
+  &:after {
+    content: "\f055";
+    .font-awesome();
+    color: @main-red-color;
+    font-size: 36px;
+  }
 }
 
-.portfolio__button {
-  margin-bottom: 140px;
-
-  cursor: pointer;
-}
 .project-list {
   padding: 0 calc(50% - 600px);
 

@@ -7,3 +7,40 @@
   flex-wrap: @flex-wrap;
   justify-content: @justify-content;
 }
+
+.font-awesome {
+  font-family: Font Awesome;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.feature-icon (@content) {
+    content:@content;
+    .font-awesome();
+    position: absolute;
+    top: 16px;
+    right: 268px;
+    font-size: 36px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: 2px solid @white-color;
+    border-radius: 50%;
+    padding: 27px;
+    text-align: center;
+}
+
+.service-icon-list (@content) {
+    content:@content;
+    .font-awesome();
+    font-size: 36px;
+    display: block;
+    color: @main-red-color;
+}
+.statistics-list-icon (@content) {
+  content: @content;
+  .font-awesome();
+  font-size: 72px;
+  margin-bottom: 46px;
+  margin-left: 5px;
+}
