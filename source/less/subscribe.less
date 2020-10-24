@@ -1,6 +1,8 @@
 .subscribe {
-  height: 80px;
-  padding: 0 calc(50% - 287px);
+  padding: 0 calc(50% - 585px);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: center;
 
   background-color: @main-red-color;
 }
@@ -11,8 +13,10 @@
   margin-top: 1px;
   margin-right: 121px;
   margin-left: -18px;
-  padding-top: 20px;
-
+  font-size: 36px;
+  color: @white-color;
+  line-height: 41px;
+font-family: @font-thin;
   background-color: transparent;
   border: none;
 
@@ -61,10 +65,8 @@
   }
 
   &:focus {
-    height: 64px;
-
-    border: 2px solid #ff3c00;
     outline: none;
+    box-shadow: 0 0 0 1px @white-color;
   }
 }
 
@@ -83,4 +85,8 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
+    &:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px @main-red-color, 0 0 0 6px @white-color;
+  }
 }

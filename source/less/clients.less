@@ -24,43 +24,26 @@
   height: 94px;
 
   background-color: @light-grey-bg-color;
+
+  & a {
+    display: block;
+    width: 170px;
+    height: 94px;
+        &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px @main-grey-color, 0 0 0 5px @white-color;
+    }
+  }
 }
 
 .clients-list__envato {
-  position: relative;
-  top: 35px;
-  left: 10px;
-
-  display: block;
-  width: 150px;
-  height: 28px;
-
-  background-image: url(../img/white-black-icon.png);
-  background-position: -4px -0;
+  background: url(../img/envato-logo.svg) no-repeat center;
 }
 
 .clients-list__wordpress {
-  position: relative;
-  top: 31px;
-  left: 10px;
-
-  display: block;
-  width: 150px;
-  height: 33px;
-
-  background-image: url(../img/white-black-icon.png);
-  background-position: -4px -32px;
+  background: url(../img/wordpress-logo.svg) no-repeat center;
 }
 
-.clients-list__dribble {
-  position: relative;
-  top: 31px;
-  left: 16px;
-
-  display: block;
-  width: 141px;
-  height: 36px;
-
-  background-image: url(../img/white-black-icon.png);
-  background-position: -4px -69px;
+.clients-list__dribbble {
+  background: url(../img/dribbble-logo.svg) no-repeat center;
 }

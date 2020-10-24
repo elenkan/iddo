@@ -1,5 +1,5 @@
 .portfolio {
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
 
   background-color: @light-grey-color;
 }
@@ -48,27 +48,41 @@
     background-color: @main-red-color;
     color: @white-color;
   }
+
+  &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px @light-grey-color, 0 0 0 5px @main-red-color;
+    }
 }
 
 .portfolio__button {
-  margin-bottom: 140px;
+  margin-bottom: 146px;
+  margin-top: -6px;
 }
 .show-button {
-  width: 30px;
+  width: 31px;
   height: 31px;
   background-color: transparent;
   border: none;
+    position: relative;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 5px @light-grey-color, 0 0 0 6px @main-red-color;
+    }
 
   &:after {
     content: "\f055";
     .font-awesome();
     color: @main-red-color;
     font-size: 36px;
+    position: absolute;
+    left: 0;
+    top: -4px;
   }
 }
 
 .project-list {
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
 
   .flex-mixin(@justify-content: flex-start);
 }
@@ -76,15 +90,19 @@
 .project-list__item {
   width: 370px;
   height: 370px;
-  margin-right: 30px;
   margin-bottom: 30px;
   position: relative;
+  margin-right: 30px;
 
   background-color: @light-grey-bg-color;
 
-  .flex-mixin(@flex-direction: column);
+  &:nth-child(3n) {
+    margin-right: 0px;
+  }
 
-  &:hover .project-list__info {
+  &:hover .project-list__info,
+  &:focus .project-list__info,
+   {
     align-items: center;
     position: absolute;
     bottom:0;
@@ -95,6 +113,11 @@
 
     .flex-mixin(@justify-content: center);
   }
+
+  &:focus {
+      outline: none;
+      box-shadow: 0 0 0 5px @light-grey-color, 0 0 0 6px @main-red-color;
+    }
 }
 
 

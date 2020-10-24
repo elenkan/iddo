@@ -1,5 +1,5 @@
 .contacts {
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
 
   background-color: @light-grey-color;
 
@@ -7,7 +7,8 @@
 }
 
 .contacts__adress,
-.contacts__phone-and-email {
+.contacts__phone-and-email,
+.contacts__phone-and-email a {
   font-size: 16px;
   line-height: 30px;
   font-family: @font;
@@ -18,10 +19,23 @@
 .contacts__adress {
   margin-bottom: 0;
   margin-top: 16px;
+  width: 332px;
+  &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px @light-grey-color, 0 0 0 4px @main-red-color;
+
+  }
 }
 
 .contacts__phone-and-email {
   margin-top: 0;
+  & a {
+    text-decoration: none;
+      &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px @light-grey-color, 0 0 0 4px @main-red-color;
+  }
+  }
 }
 
 .contacts__title {
@@ -39,7 +53,7 @@
 
 .contact-form {
   margin-bottom: 144px;
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
 
   color: @darken-grey-color;
 
@@ -50,48 +64,15 @@
   }
 
   &__label-email:before {
-    content: "";
-    position: absolute;
-    top: 17px;
-    right: 364px;
-    z-index: 10;
-
-    display: block;
-    width: 17px;
-    height: 13px;
-
-    background-image: url(../img/white-black-icon.png);
-    background-position: -126px -109px;
+  .contacts-list-icon("\f0e0", 17px, 365px);
   }
 
   &__label-name:before {
-    content: "";
-    position: absolute;
-    top: 17px;
-    right: 338px;
-    z-index: 10;
-
-    display: block;
-    width: 14px;
-    height: 14px;
-
-    background-image: url(../img/white-black-icon.png);
-    background-position: -126px -126px;
+    .contacts-list-icon("\f007", 17px, 339px);
   }
 
   &__label-message:before {
-    content: "";
-    position: absolute;
-    top: 47px;
-    right: 764px;
-    z-index: 10;
-
-    display: block;
-    width: 18px;
-    height: 15px;
-
-    background-image: url(../img/white-black-icon.png);
-    background-position: -104px -109px;
+    .contacts-list-icon("\f040", 47px, 768px);
   }
 }
 
@@ -101,18 +82,19 @@
   width: 370px;
   height: 50px;
   padding-left: 33px;
+  padding-top: 4px;
 
   border: 2px solid @darken-grey-color;
 
   &:first-of-type {
-    margin-right: 31px;
+    margin-right: 30px;
     padding-left: 37px;
   }
 
   &--message {
     width: 770px;
     height: 78px;
-    margin-top: 30px;
+    margin-top: 31px;
     padding-top: 4px;
   }
 
@@ -166,9 +148,9 @@
   }
 
   &:focus {
-    border: 2px solid #ff3c00;
-    outline: none;
-  }
+      outline: none;
+      border: 2px solid @main-red-color;
+  }a
   &:focus + label {
     display: none;
   }
@@ -194,18 +176,17 @@
   border-radius: 10px;
 
   &:before {
-    content: "";
+    content: "\f05d";
+    .font-awesome();
+    font-size: 36px;
     position: absolute;
-    top: 25px;
+    top: 21px;
     left: 140px;
     z-index: 10;
-
-    display: block;
-    width: 31px;
-    height: 32px;
-
-    background-image: url(../img/red-icon-sprite.png);
-    background-position: -4px -138px;
+  }
+  &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px @light-grey-color, 0 0 0 4px @main-red-color;
   }
 }
 
@@ -218,61 +199,38 @@
   list-style: none;
 
   .flex-mixin();
+
+  & a {
+    text-decoration: none;
+  &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px @light-grey-color, 0 0 0 4px @main-red-color;
+  }
+
+  }
 }
 
-.social-list__twitter {
-  display: block;
-  width: 24px;
-  height: 24px;
-
-  background: url(../img/red-twitter.svg) no-repeat;
+.social-list__twitter:before {
+  .social-list-icon("\f099");
 }
-.social-list__facebook {
-  display: block;
-  width: 24px;
-  height: 24px;
-
-  background: url(../img/red-facebook.svg) no-repeat;
+.social-list__facebook:before {
+  .social-list-icon("\f09a");
 }
-.social-list__google-plus {
-  display: block;
-  width: 24px;
-  height: 24px;
-
-  background: url(../img/google-plus.svg) no-repeat;
+.social-list__google-plus:before {
+  .social-list-icon("\f0d5");
 }
-.social-list__pintrest {
-  display: block;
-  width: 24px;
-  height: 24px;
-
-  background: url(../img/pinterest.svg) no-repeat;
+.social-list__pintrest:before {
+  .social-list-icon("\f0d2");
 }
-.social-list__instagram {
-  display: block;
-  width: 24px;
-  height: 24px;
-
-  background: url(../img/red-instagram.svg) no-repeat;
+.social-list__instagram:before {
+  .social-list-icon("\f16d");
 }
-.social-list__youtube {
-  display: block;
-  width: 24px;
-  height: 24px;
-
-  background: url(../img/youtube.svg) no-repeat;
+.social-list__youtube:before {
+  .social-list-icon("\f16a");
 }
-.social-list__skype {
-  display: block;
-  width: 24px;
-  height: 24px;
-
-  background: url(../img/skype.svg) no-repeat;
+.social-list__skype:before {
+  .social-list-icon("\f17e");
 }
-.social-list__dribble {
-  display: block;
-  width: 24px;
-  height: 24px;
-
-  background: url(../img/dribbble.svg) no-repeat;
+.social-list__dribbble:before {
+  .social-list-icon("\f17d");
 }

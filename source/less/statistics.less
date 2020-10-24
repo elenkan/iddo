@@ -1,17 +1,17 @@
 .statistics {
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
 
   background-color: @main-grey-color;
 }
 
 .statistics-list {
-  padding-top: 88px;
+  padding-top: 93px;
   padding-bottom: 64px;
   padding-left: 0;
 
   list-style: none;
 
-  .flex-mixin();
+  .flex-mixin(@flex-wrap: nowrap;);
 }
 
 .statistics-list__item {
@@ -23,8 +23,15 @@
   line-height: 41px;
   font-family: @font;
   color: @white-color;
+  padding-top: 11px;
 
   .flex-mixin(@flex-direction: column);
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px @main-grey-color, 0 0 0 6px @white-color;
+
+  }
 
   &:first-child:before {
     .statistics-list-icon("\f06b");
@@ -44,6 +51,7 @@
 }
 
 .statistics-list__number {
+  margin-top: 14px;
   margin-bottom: 7px;
 
   font-size: 72px;

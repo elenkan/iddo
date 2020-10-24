@@ -1,11 +1,9 @@
 'use strict';
 (function() {
-
-const getRandomElement = array => {
-  let indexElement = Math.round(Math.random() * (array.length - 1));
-  return array[indexElement];
-};
-let authors = ['Michael Joe', 'Jeremy Scott', 'Justin West'];
+const MULTIPLIER = 10000000000;
+const QUANTITY = 15;
+let authors = ['Michael Joe', 'Jeremy Scott', 'Justin West','Kate Smith'];
+const categories = ['website', 'branding'];
 let images = ['https://funkyimg.com/i/37Pvo.jpg',
 'https://funkyimg.com/i/37Pvp.png',
 'https://funkyimg.com/i/37Pvq.png',
@@ -15,70 +13,27 @@ let images = ['https://funkyimg.com/i/37Pvo.jpg',
 'https://funkyimg.com/i/37Pvw.jpg',
 'https://funkyimg.com/i/37Pvx.png'
 ];
-
 let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
  'August', 'September', 'October', 'November', 'December'];
 
-let dateProject = `${months[new Date().getMonth()]} ${new Date().getDate()}, ${new Date().getFullYear()}`;
+const getRandomNumber = number=>  Math.round(Math.random() * number);
 
-const works = [
-  {
-    category: 'website project',
+const getRandomElement = array => array[getRandomNumber((array.length - 1))]
+
+const getRandomDate = () => (Date.now() - getRandomNumber(MULTIPLIER));
+
+
+let getDateProject = (data = new Date(getRandomDate()))=> `${months[data.getMonth()]} ${data.getDate()}, ${data.getFullYear()}`;
+
+const works = new Array(getRandomNumber(QUANTITY))
+.fill('')
+.map((item)=>
+  (item = {
+    category: `${getRandomElement(categories)} project`,
     author: getRandomElement(authors),
     srcImg: getRandomElement(images),
-    dateProject
-  },
-
-  {
-    category: 'branding project',
-    author: getRandomElement(authors),
-    srcImg: getRandomElement(images),
-    dateProject
-  },
-
-  {
-    category: 'branding project',
-    author: getRandomElement(authors),
-    srcImg: getRandomElement(images),
-    dateProject
-  },
-
-  {
-    category: 'branding project',
-    author: getRandomElement(authors),
-    srcImg: getRandomElement(images),
-    dateProject
-  },
-
-  {
-    category: 'website project',
-    author: getRandomElement(authors),
-    srcImg: getRandomElement(images),
-    dateProject
-  },
-
-  {
-    category: 'website project',
-    author: getRandomElement(authors),
-    srcImg: getRandomElement(images),
-    dateProject
-  },
-
-  {
-    category: 'website project',
-    author: getRandomElement(authors),
-    srcImg: getRandomElement(images),
-    dateProject
-  },
-
-  {
-    category: 'website project',
-    author: getRandomElement(authors),
-    srcImg: getRandomElement(images),
-    dateProject
-  }
-];
-
+    dateProject: getDateProject()
+}));
 
 window.data = {
   works: works

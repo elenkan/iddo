@@ -36,11 +36,53 @@
     font-size: 36px;
     display: block;
     color: @main-red-color;
+    text-align: center;
 }
+
 .statistics-list-icon (@content) {
   content: @content;
   .font-awesome();
   font-size: 72px;
   margin-bottom: 46px;
   margin-left: 5px;
+}
+
+.skills-list-icon (@content){
+  content: @content;
+  font-size: 24px;
+  .font-awesome();
+  color: @author-text-color;
+  position: absolute;
+  top: 10px;
+  left: 21px;
+  z-index: 10;
+}
+
+.contacts-list-icon (@content,@top,@right) {
+  content: @content;
+  font-size: 16px;
+  .font-awesome();
+  position: absolute;
+  top: @top;
+  right: @right;
+  z-index: 10;
+}
+.team-list-icon (@content){
+  content: @content;
+  font-size: 24px;
+  .font-awesome();
+  color: @white-color;
+  text-align: center;
+}
+
+.social-list-icon (@content){
+  content: @content;
+  .font-awesome();
+  font-size: 16px;
+  color: @main-red-color;
+}
+
+.white-focus {
+  outline: none;
+  box-shadow: 0 0 0 4px black, 0 0 0 5px white;
 }

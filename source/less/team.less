@@ -1,26 +1,35 @@
 .team {
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
 }
 
 .team-list {
   position: relative;
   margin-bottom: 17px;
 
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
 
   list-style: none;
 
   .flex-mixin(@justify-content: flex-start);
 }
+
 .team-list__item {
   position: relative;
+  margin-right: 30px;
 
   width: 360px;
-  margin-right: 40px;
 
   .flex-mixin(@flex-direction: column);
+    &:nth-child(3n) {
+    margin-right: 0px;
+  }
 
-  &:hover .team-list__contacts {
+  &:focus {
+        outline: none;
+  }
+
+  &:hover .team-list__contacts,
+  &:focus .team-list__contacts {
     position: absolute;
     top: 62px;
     left: 140px;
@@ -64,6 +73,10 @@
   font-family: @font-bold;
   color: @main-red-color;
   text-transform: uppercase;
+        &:focus {
+      outline: none;
+      box-shadow: 0 0 0 5px @white-color, 0 0 0 6px @main-red-color;
+    }
 }
 
 .team__title {
@@ -106,32 +119,48 @@
   margin-bottom: 125px;
 
   cursor: pointer;
+
+  &:focus {
+      outline: none;
+      box-shadow: 0 0 0 5px @white-color, 0 0 0 6px @main-red-color;
+    }
 }
 
 .team-list__contacts {
   display: none;
+
+  & a {
+    text-decoration: none;
+  }
 }
 
-.team-list__twitter-contact {
+.team-list__twitter-contact:before {
+  .team-list-icon("\f099");
   display: block;
   width: 50px;
   height: 50px;
-
-  background: url(../img/twitter.svg) no-repeat;
+  background-color: @main-red-color;
+  border-radius: 50%;
+  padding-top: 11px;
 }
 
-.team-list__facebook-contact {
+.team-list__facebook-contact:before {
+  .team-list-icon("\f09a");
   display: block;
   width: 50px;
   height: 50px;
-
-  background: url(../img/facebook.svg) no-repeat;
+  background-color: @main-red-color;
+  border-radius: 50%;
+  padding-top: 11px;
 }
 
-.team-list__instagram-contact {
+.team-list__instagram-contact:before {
+  .team-list-icon("\f16d");
   display: block;
   width: 50px;
   height: 50px;
-
-  background: url(../img/instagram.svg) no-repeat;
+  background-color: @main-red-color;
+  border-radius: 50%;
+  padding-top: 11px;
 }
+

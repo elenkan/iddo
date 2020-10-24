@@ -2,7 +2,7 @@
   position: relative;
 
   margin-bottom: 121px;
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
 
   font-family: @font;
 
@@ -57,8 +57,30 @@
 
 .skills-list__item {
   margin-bottom: 11px;
+  position: relative;
+
+  &:first-child:before {
+   .skills-list-icon("\f135");
+  }
+
+  &:nth-child(2):before {
+.skills-list-icon("\f13e");
+  }
+
+   &:nth-child(3):before {
+.skills-list-icon("\f124");
+  }
+   &:nth-child(4):before {
+.skills-list-icon("\f095");
+  }
+   &:nth-child(5):before {
+.skills-list-icon("\f02d");
+  }
 
   &[open] .skills-list__btn {
+    color: @main-red-color;
+  }
+  &[open]:before {
     color: @main-red-color;
   }
 
@@ -98,6 +120,10 @@
   &::-webkit-details-marker {
     display: none;
   }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px @white-color, 0 0 0 6px @main-red-color;
+  }
 }
 
 .skills-list__sign {
@@ -122,9 +148,6 @@
   }
 }
 
-// .skills-list__btn--active {
-//   color: @main-red-color;
-// }
 
 .skills-list__text {
   width: 322px;
@@ -145,11 +168,6 @@
   text-align: right;
 
   & text {
-    // position: absolute;
-    // top: 56px;
-    // left: 73px;
-    //z-index: 10;
-
     font-weight: bold;
     font-size: 18px;
     line-height: 60px;
@@ -212,4 +230,3 @@
 .skills__img--50 {
   animation: moven 2s ease forwards;
 }
-

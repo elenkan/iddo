@@ -1,37 +1,22 @@
 'use strict';
 (function () {
-  let sliderOneBtn = document.querySelector('.feedback__one-button');
-  let sliderTwoBtn = document.querySelector('.feedback__two-button');
-  let sliderThreeBtn = document.querySelector('.feedback__three-button');
-  let sliderOne = document.querySelector('.feedback-post:first-of-type');
-  let sliderTwo = document.querySelector('.feedback-post:nth-of-type(2)');
-  let sliderThree = document.querySelector('.feedback-post:last-of-type');
 
-    sliderTwoBtn.addEventListener('click', function() {
-    sliderOne.classList.add('non-visible');
-    sliderThree.classList.add('non-visible');
-    sliderOneBtn.classList.remove('feedback__button-active');
-    sliderThreeBtn.classList.remove('feedback__button-active');
-    sliderTwo.classList.remove('non-visible');
-    sliderTwoBtn.classList.add('feedback__button-active');
-  });
+  const sliderButtons = Array.from(document.querySelectorAll('.feedback__button'));
+  const sliders = Array.from(document.querySelectorAll('.feedback-post'));
 
-  sliderThreeBtn.addEventListener('click', function() {
-    sliderOne.classList.add('non-visible');
-    sliderTwo.classList.add('non-visible');
-    sliderThree.classList.remove('non-visible');
-    sliderTwoBtn.classList.remove('feedback__button-active');
-    sliderThreeBtn.classList.add('feedback__button-active');
-  });
+  const changeSliderVisible = (evt)=> {
+    window.interactive.changeButtonStatus(evt,sliderButtons,'feedback__button-active');
+    let indexElement = sliderButtons.indexOf(evt.target);
+    sliders.forEach(item=>{
+      if(!item.classList.contains('non-visible')){
+        item.classList.add('non-visible');
+      }
+    });
+    sliders[indexElement].classList.remove('non-visible');
+  };
 
-  sliderOneBtn.addEventListener('click', function() {
-    sliderTwo.classList.add('non-visible');
-    sliderThree.classList.add('non-visible');
-    sliderTwoBtn.classList.remove('feedback__button-active');
-    sliderThreeBtn.classList.remove('feedback__button-active');
-    sliderOne.classList.remove('non-visible');
-    sliderThree.classList.add('non-visible');
-    sliderOneBtn.classList.add('feedback__button-active');
-  });
+  sliderButtons.forEach(slider=> slider.addEventListener('click', function(evt){
+    changeSliderVisible(evt);
+  }));
 
 })();

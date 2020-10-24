@@ -3,7 +3,7 @@
 
   min-height: 350px;
   margin-bottom: 150px;
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
   padding-bottom: 5px;
 
   font-family: @font;
@@ -27,12 +27,18 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 35px;
+  margin-bottom: -2px;
+
 
   &__title {
     font-size: 16px;
     line-height: 30px;
     font-family: @font-bold;
     text-transform: uppercase;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px @main-red-color, 0 0 0 5px @white-color;
+    }
   }
 
   &__description {
@@ -73,10 +79,10 @@
 
 .icon-list {
   position: absolute;
-  top: 419px;
-  left: 75px;
+  top: 413px;
+  left: 67px;
 
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
 
   list-style: none;
 
@@ -87,12 +93,19 @@
   align-self: center;
   width: 40px;
   margin-right: 158px;
+
   &:last-child {
     margin-right: 0;
   }
 
   & a {
     text-decoration: none;
+    display: block;
+    width: 40px;
+      &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px @white-color, 0 0 0 5px @main-red-color;
+    }
   }
 }
 

@@ -1,6 +1,6 @@
 .page-footer {
   align-items: center;
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
   padding-top: 47px;
   padding-bottom: 15px;
 
@@ -34,12 +34,16 @@
   position: relative;
 
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   margin-right: 21px;
 
   background-color: transparent;
   border: none;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px @black-color, 0 0 0 5px @white-color;
+  }
 
   &:before {
     content: "";
@@ -47,6 +51,8 @@
     display: block;
     width: 13px;
     height: 13px;
+    position: relative;
+    left: 1px;
 
     background-color: transparent;
     border-top: 2px solid @main-red-color;

@@ -1,13 +1,13 @@
 'use strict';
 (function() {
   let portfolioButton = document.querySelector('.portfolio__button');
-  let showButtons = document.querySelectorAll('.show-button');
   let projectList = document.querySelector('.project-list');
   let allFilterBtn = document.querySelector('.portfolio-list__button--all');
   let websiteFilterBtn = document.querySelector('.portfolio-list__button--website');
   let brandingFilterBtn = document.querySelector('.portfolio-list__button--branding');
   const VISIBLE_LIST_LENGTH = 5;
   const INDEX_ELEMENT = 6;
+  const portfolioButtonList = Array.from(document.querySelectorAll('.portfolio-list__button'));
 
   window.addEventListener('load', function() {
     allFilterBtn.click();
@@ -17,12 +17,25 @@ const showHiddenElement = (button, list, indexElement) => {
   button.addEventListener('click', function() {
     button.classList.add('non-visible');
     list.forEach((item, index) => {
-      if (index >= indexElement) {
+      if (index >= indexElement){
         item.classList.remove('non-visible');
       }
     });
   });
 };
+
+// const showHiddenElement = (button, list, indexElement) => {
+//   button.addEventListener('click', function() {
+//     list.forEach((item, index) => {
+//       if (index >= indexElement){
+//         item.classList.remove('non-visible');
+//       }
+//     });
+//   });
+// };
+
+
+
 
 
   const changeVisibleBtn = (button, list) => {
@@ -34,7 +47,7 @@ const showHiddenElement = (button, list, indexElement) => {
   };
 
   const renderProjectCard = item =>
-    `<article class="project-list__item ${item.category}">
+    `<article class="project-list__item js-${item.category}" tabindex="0">
             <img src="${item.srcImg}" class="project-list__image" width="370" height="370" alt="${item.category}">
             <div class="project-list__info">
               <span class="project-list__title">${item.category}</span>
@@ -42,11 +55,11 @@ const showHiddenElement = (button, list, indexElement) => {
             </div>
         </article>`;
 
-  const getList = (array, word) => {
-    let arrayOne = array.filter(element => element.category.includes(word));
+  const renderProjectsList = (array, word) => {
+    let newArray = array.filter(element => element.category.includes(word));
 
-    arrayOne.forEach(item => projectList.insertAdjacentHTML('afterbegin', renderProjectCard(item)));
-    changeVisibleBtn(portfolioButton, arrayOne);
+    newArray.forEach(item => projectList.insertAdjacentHTML('afterbegin', renderProjectCard(item)));
+    changeVisibleBtn(portfolioButton, newArray);
 
     let projects = projectList.querySelectorAll('.project-list__item');
 
@@ -60,36 +73,27 @@ const showHiddenElement = (button, list, indexElement) => {
   };
 
 
-  allFilterBtn.addEventListener('click', function() {
-    allFilterBtn.classList.add('portfolio-list__button--active');
-    websiteFilterBtn.classList.remove('portfolio-list__button--active');
-    brandingFilterBtn.classList.remove('portfolio-list__button--active');
+const changeButtonStatus = (evt, array, className) => {
+  array.find(item=>item.classList
+    .contains(className))
+  .classList.remove(className);
+  evt.target.classList.add(className);
+};
 
+const renderPortfolioList = (evt)=> {
     projectList.innerHTML = '';
-    getList(window.data.works.slice(), 'project');
-  });
+    renderProjectsList(window.data.works, evt.target.dataset.project);
+};
 
+portfolioButtonList.forEach(btn=>btn.addEventListener('click', function(evt){
+  changeButtonStatus(evt,portfolioButtonList, 'portfolio-list__button--active');
+  renderPortfolioList(evt);
+}));
 
-  websiteFilterBtn.addEventListener('click', function() {
-    allFilterBtn.classList.remove('portfolio-list__button--active');
-    websiteFilterBtn.classList.add('portfolio-list__button--active');
-    brandingFilterBtn.classList.remove('portfolio-list__button--active');
-
-    projectList.innerHTML = '';
-    getList(window.data.works, 'website');
-  });
-
-  brandingFilterBtn.addEventListener('click', function() {
-    allFilterBtn.classList.remove('portfolio-list__button--active');
-    websiteFilterBtn.classList.remove('portfolio-list__button--active');
-    brandingFilterBtn.classList.add('portfolio-list__button--active');
-
-    projectList.innerHTML = '';
-    getList(window.data.works, 'branding');
-  });
 
 window.interactive = {
-  showHiddenElement: showHiddenElement
+  showHiddenElement: showHiddenElement,
+  changeButtonStatus: changeButtonStatus
 }
 
 })();
