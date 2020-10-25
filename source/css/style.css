@@ -892,9 +892,7 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
 }
-.feedback__one-button,
-.feedback__two-button,
-.feedback__three-button {
+.feedback__button {
   display: block;
   width: 11px;
   height: 11px;
@@ -904,15 +902,11 @@ ul {
   border: 2px solid #ffffff;
   border-radius: 50%;
 }
-.feedback__one-button:hover,
-.feedback__two-button:hover,
-.feedback__three-button:hover {
+.feedback__button:hover {
   background-color: #ffffff;
   cursor: pointer;
 }
-.feedback__one-button:focus,
-.feedback__two-button:focus,
-.feedback__three-button:focus {
+.feedback__button:focus {
   outline: none;
   box-shadow: 0 0 0 2px #666666, 0 0 0 4px #ffffff;
 }

@@ -2,7 +2,7 @@
 (function() {
   const portfolioButton = document.querySelector('.portfolio__button');
   const projectList = document.querySelector('.project-list');
-  const allFilterBtn = document.querySelector('.portfolio-list__button--all');
+  const allFilterBtn = document.querySelector('.js-portfolio-list__button--all');
   const VISIBLE_LIST_LENGTH = 6;
   const INDEX_ELEMENT = 6;
   const NUMBER_OPEN_ELEMENT = 5;
