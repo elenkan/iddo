@@ -5,7 +5,7 @@
   const sliders = Array.from(document.querySelectorAll('.feedback-post'));
 
   const changeSliderVisible = (evt)=> {
-    window.interactive.changeButtonStatus(evt,sliderButtons,'feedback__button-active');
+    window.portfolioList.changeButtonStatus(evt,sliderButtons,'feedback__button-active');
     let indexElement = sliderButtons.indexOf(evt.target);
     sliders.forEach(item=>{
       if(!item.classList.contains('non-visible')){
