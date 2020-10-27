@@ -1,0 +1,151 @@
+.modal-signup {
+  position: absolute;
+  top: 140px;
+  left: calc(50% - 200px);
+
+  display: none;
+  width: 335px;
+  height: 380px;
+  padding-top: 20px;
+
+  background-color: @white-color;
+  border-top: 12px solid @main-red-color;
+  border-radius: 10px;
+  box-shadow: 0 0 0 9999px rgba(202, 60, 60, 0.3);
+  form {
+    align-items: center;
+    width: 335px;
+
+    .flex-mixin(@flex-direction: column);
+  }
+}
+
+.modal-signup__title {
+  margin-top: 20px;
+
+  font-size: 24px;
+  line-height: 18px;
+  font-family: @font-bold;
+  text-align: center;
+  color: @main-red-color;
+}
+
+.signup-form__input {
+  position: relative;
+
+  width: 225px;
+  height: 50px;
+  padding-top: 25px;
+
+  border: none;
+  border-bottom: 2px solid @darken-grey-color;
+
+  &::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+    font-family: @font-bold;
+    color: @black-color;
+    text-transform: uppercase;
+  }
+
+  &::-moz-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+    font-family: @font-bold;
+    vertical-align: middle;
+    color: @black-color;
+    text-transform: uppercase;
+  }
+
+  &:-moz-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+    font-family: @font-bold;
+    color: @black-color;
+    text-transform: uppercase;
+  }
+
+  &:-ms-input-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+    font-family: @font-bold;
+    color: @black-color;
+    text-transform: uppercase;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus {
+    border-bottom: 2px solid @main-red-color;
+    outline: none;
+  }a
+  &:focus + label {
+    display: none;
+  }
+}
+
+.signup-form__btn {
+  position: relative;
+
+  width: 166px;
+  height: 52px;
+  margin-top: 33px;
+  margin-bottom: 15px;
+  padding-left: 43px;
+
+  font-size: 16px;
+  line-height: 41px;
+  font-family: @font;
+  text-align: center;
+  color: @white-color;
+
+  background-color: @main-red-color;
+  border: none;
+  border-radius: 10px;
+
+  &:before {
+    content: "\f05d";
+    position: absolute;
+    top: 6px;
+    left: 39px;
+    z-index: 10;
+
+    font-size: 36px;
+
+    .font-awesome();
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px @white-color, 0 0 0 4px @main-red-color;
+  }
+}
+
+.signup-form__btn-cancel {
+  font-size: 15px;
+  line-height: 14px;
+  font-family: @font;
+  text-align: center;
+  color: @main-red-color;
+
+  border-bottom: 1px solid @main-red-color;
+  &:focus {
+    border: 1px solid @white-color;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0 0 0 3px @white-color, 0 0 0 4px @main-red-color;
+  }
+}
