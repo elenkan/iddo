@@ -1,6 +1,6 @@
 .feedback {
   margin-top: -51px;
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
 
   background-color: @main-grey-color;
 }
@@ -44,22 +44,20 @@
 
 .feedback__slider {
   position: relative;
-  right: 11px;
+  left: 6px;
   bottom: 22px;
 
-  padding-bottom: 9px;
+  padding-bottom: 8px;
 
   list-style: none;
 
   .flex-mixin(@justify-content: center);
 }
 
-.feedback__one-button,
-.feedback__two-button,
-.feedback__three-button {
+.feedback__button {
   display: block;
   width: 11px;
-  height: 10px;
+  height: 11px;
   margin-right: 10px;
   padding: 0;
 
@@ -70,6 +68,10 @@
     background-color: @white-color;
     cursor: pointer;
   }
+  &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px @main-grey-color, 0 0 0 4px @white-color;
+    }
 }
 
 .feedback__button-active {

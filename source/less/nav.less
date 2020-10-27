@@ -1,5 +1,5 @@
 .page-header {
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
   padding-bottom: 23px;
   padding-top: 23px;
 
@@ -31,6 +31,9 @@
     line-height: 19px;
     color: @white-color;
     text-decoration: none;
+      &:focus {
+    .white-focus();
+  }
   }
 }
 
@@ -49,4 +52,9 @@
 
   border: 2px solid #ca3c3c;
   border-radius: 10px;
+  cursor: pointer;
+
+  &:focus {
+    .white-focus();
+  }
 }

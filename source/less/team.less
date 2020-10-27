@@ -1,26 +1,35 @@
 .team {
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
 }
 
 .team-list {
   position: relative;
   margin-bottom: 17px;
 
-  padding: 0 calc(50% - 600px);
+  padding: 0 calc(50% - 585px);
 
   list-style: none;
 
   .flex-mixin(@justify-content: flex-start);
 }
+
 .team-list__item {
   position: relative;
-
-  width: 360px;
   margin-right: 40px;
 
-  .flex-mixin(@flex-direction: column);
+  width: 360px;
 
-  &:hover .team-list__contacts {
+  .flex-mixin(@flex-direction: column);
+    &:nth-child(3n) {
+    margin-right: 0px;
+  }
+
+  &:focus {
+        outline: none;
+  }
+
+  &:hover .team-list__contacts,
+  &:focus .team-list__contacts {
     position: absolute;
     top: 62px;
     left: 140px;
@@ -36,7 +45,6 @@
 
 .team-list__member-photo {
   position: relative;
-  right: 1px;
 
   width: 170px;
   height: 170px;
@@ -54,16 +62,24 @@
   }
 }
 
+.team-list__member-info {
+  width: 270px;
+  margin-left: 100px;
+}
+
 .team-list__member-name {
-  align-self: flex-end;
-  width: 263px;
-  margin-bottom: 11px;
+  width: 270px;
+  margin-bottom: 9px;
 
   font-size: 18px;
   line-height: 18px;
   font-family: @font-bold;
   color: @main-red-color;
   text-transform: uppercase;
+        &:focus {
+      outline: none;
+      box-shadow: 0 0 0 5px @white-color, 0 0 0 6px @main-red-color;
+    }
 }
 
 .team__title {
@@ -79,8 +95,7 @@
 }
 
 .team-list__position {
-  align-self: flex-end;
-  width: 263px;
+  width: 270px;
 
   font-size: 14px;
   line-height: 14px;
@@ -89,49 +104,64 @@
 }
 
 .team-list__description {
-  align-self: flex-end;
-  width: 270px;
-  margin-top: 21px;
-  margin-bottom: 30px;
-  margin-left: 100px;
 
-  font-weight: lighter;
+  width: 270px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+
   font-size: 14px;
   line-height: 22px;
-  font-family: @font;
+  font-family: @font-thin;
   color: @darken-grey-color;
 }
 
 .team__button {
-  margin-bottom: 125px;
+  margin-bottom: 124px;
 
   cursor: pointer;
+
+  &:focus {
+      outline: none;
+      box-shadow: 0 0 0 5px @white-color, 0 0 0 6px @main-red-color;
+    }
 }
 
 .team-list__contacts {
   display: none;
+
+  & a {
+    text-decoration: none;
+  }
 }
 
-.team-list__twitter-contact {
+.team-list__twitter-contact:before {
+  .team-list-icon("\f099");
   display: block;
   width: 50px;
   height: 50px;
-
-  background: url(../img/twitter.svg) no-repeat;
+  background-color: @main-red-color;
+  border-radius: 50%;
+  padding-top: 11px;
 }
 
-.team-list__facebook-contact {
+.team-list__facebook-contact:before {
+  .team-list-icon("\f09a");
   display: block;
   width: 50px;
   height: 50px;
-
-  background: url(../img/facebook.svg) no-repeat;
+  background-color: @main-red-color;
+  border-radius: 50%;
+  padding-top: 11px;
 }
 
-.team-list__instagram-contact {
+.team-list__instagram-contact:before {
+  .team-list-icon("\f16d");
   display: block;
   width: 50px;
   height: 50px;
-
-  background: url(../img/instagram.svg) no-repeat;
+  background-color: @main-red-color;
+  border-radius: 50%;
+  padding-top: 11px;
 }
+
