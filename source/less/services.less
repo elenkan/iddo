@@ -35,10 +35,6 @@
     line-height: 30px;
     font-family: @font-bold;
     text-transform: uppercase;
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 4px @main-red-color, 0 0 0 5px @white-color;
-    }
   }
 
   &__description {
@@ -133,4 +129,45 @@
 .icon-list__link-banknote:after {
   display: block;
   .service-icon-list("\f0d6");
+}
+
+@media (max-width: @mobile-width) {
+  .services {
+    padding: 0 calc(50% - 190px);
+    justify-content: center;
+
+    &__title {
+      margin: 0 auto;
+      padding-top: 36px;
+    }
+  }
+  .services-list {
+    width: 360px;
+    margin-top: 35px;
+
+    &__description {
+      width: 235px;
+    }
+  }
+
+  .services-list__item {
+      width: 360px;
+
+      &:first-child:before,
+      &:nth-child(2):before,
+      &:nth-child(3):before,
+      &:last-child:before {
+        right: 245px;
+      }
+    }
+
+    .icon-list {
+      left: 19px;
+      top: 934px;
+      padding: 0 calc(50% - 190px);
+      &__item {
+        margin-right: 18px;
+      }
+    }
+  
 }

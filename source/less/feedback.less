@@ -77,3 +77,21 @@
 .feedback__button-active {
   background-color: @white-color;
 }
+@media (max-width: @mobile-width) {
+ .feedback {
+    padding: 0 calc(50% - 190px);
+  }
+  .feedback-post {
+    margin-left: 0;
+    margin-top: 0px;
+    font-size: 24px;
+    line-height: 29px;
+    width: 370px;
+    &__text {
+      width: 360px;
+    }
+  }
+  .feedback__slider {
+    left: 0;
+  }
+}

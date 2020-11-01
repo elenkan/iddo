@@ -89,3 +89,25 @@ font-family: @font-thin;
     box-shadow: 0 0 0 5px @main-red-color, 0 0 0 6px @white-color;
   }
 }
+@media (max-width: @mobile-width) {
+  .subscribe {
+    padding: 0 calc(50% - 190px);
+  }
+.subscribe-form-email {
+  margin-right: 0px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 340px;
+  height: 52px;
+  font-size: 24px;
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &:-ms-input-placeholder {
+    font-size: 24px;
+  }
+}
+.subscribe-form__btn {
+  margin-bottom: 20px;
+}
+}

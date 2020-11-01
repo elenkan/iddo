@@ -1,6 +1,6 @@
 'use strict';
 (function() {
-  const signUpBtn = document.querySelector('.page-header__subscribe-link');
+  const signUpBtn = document.querySelector('.page-header__signup-link');
   const modal = document.querySelector('.modal-signup');
   const closeBtn = document.querySelector('.signup-form__btn-cancel');
 

@@ -44,3 +44,19 @@
 .clients-list__dribbble {
   background: url(../img/dribbble-logo.svg) no-repeat center;
 }
+@media (max-width: @mobile-width) {
+  .clients {
+    padding: 0 calc(50% - 190px);
+  }
+
+  .clients-list {
+    margin-top: 0px;
+    padding-top: 20px;
+    justify-content: space-around;
+
+    &__item {
+      margin-bottom: 20px;
+    }
+  }
+
+}
