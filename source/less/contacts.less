@@ -20,11 +20,6 @@
   margin-bottom: 0;
   margin-top: 16px;
   width: 332px;
-  &:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px @light-grey-color, 0 0 0 4px @main-red-color;
-
-  }
 }
 
 .contacts__phone-and-email {
@@ -234,3 +229,52 @@
 .social-list__dribbble:before {
   .social-list-icon("\f17d");
 }
+
+@media (max-width: @mobile-width) {
+
+  .contacts {
+    padding: 0 calc(50% - 190px);
+    align-items: center;
+
+    &__title {
+  width: 270px;
+  margin: 0 auto;
+  padding-top: 36px;
+    }
+    &__phone-and-email {
+      width: 332px;
+    }
+  }
+
+  .contact-form {
+    justify-content: center;
+    margin-bottom: 70px;
+    &__btn {
+      width: 320px;
+
+      &:before {
+        left: 117px;
+      }
+    }
+  }
+  .contact-form__input {
+    width: 320px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    &:first-of-type {
+      margin-right: 0px;
+    }
+    &--message {
+      margin-top: 0px;
+    }
+  }
+  .contact-form__label-email:before,
+  .contact-form__label-name:before,
+  .contact-form__label-message:before {
+    right: 300px;
+  }
+  .social-list {
+    width: 320px;
+  }
+}
+

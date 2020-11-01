@@ -24,12 +24,7 @@
     margin-right: 0px;
   }
 
-  &:focus {
-        outline: none;
-  }
-
-  &:hover .team-list__contacts,
-  &:focus .team-list__contacts {
+  &:hover .team-list__contacts {
     position: absolute;
     top: 62px;
     left: 140px;
@@ -76,10 +71,6 @@
   font-family: @font-bold;
   color: @main-red-color;
   text-transform: uppercase;
-        &:focus {
-      outline: none;
-      box-shadow: 0 0 0 5px @white-color, 0 0 0 6px @main-red-color;
-    }
 }
 
 .team__title {
@@ -163,5 +154,40 @@
   background-color: @main-red-color;
   border-radius: 50%;
   padding-top: 11px;
+}
+
+@media (max-width: @mobile-width) {
+  .team {
+    padding: 0 calc(50% - 190px);
+
+    &__title {
+      width: 270px;
+    margin: 0 auto;
+    padding-top: 36px;
+    }
+
+    &__button {
+      left: 174px;
+      margin-bottom: 70px;
+    }
+  }
+
+  
+  .team-list {
+    padding: 0 calc(50% - 190px);
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.team-list__item {
+    margin-right: 0px;
+    width: 320px;
+    align-items: center;
+}
+
+.team-list__member-info {
+  margin-left: 0px;
+}
+
 }
 
