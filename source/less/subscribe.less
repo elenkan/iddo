@@ -2,6 +2,7 @@
   padding: 0 calc(50% - 585px);
   padding-top: 4px;
   padding-bottom: 4px;
+
   text-align: center;
 
   background-color: @main-red-color;
@@ -12,10 +13,12 @@
   height: 72px;
   margin-right: 121px;
   margin-left: -4px;
+
   font-size: 36px;
-  color: @white-color;
   line-height: 41px;
-font-family: @font-thin;
+  font-family: @font-thin;
+  color: @white-color;
+
   background-color: transparent;
   border: none;
 
@@ -28,7 +31,7 @@ font-family: @font-thin;
 
   &::-moz-placeholder {
     font-size: 36px;
-    line-height: 41px;
+    line-height: 68px;
     font-family: @font-thin;
     color: @white-color;
   }
@@ -84,30 +87,8 @@ font-family: @font-thin;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-    &:focus {
+  &:focus {
     outline: none;
     box-shadow: 0 0 0 5px @main-red-color, 0 0 0 6px @white-color;
   }
-}
-@media (max-width: @mobile-width) {
-  .subscribe {
-    padding: 0 calc(50% - 190px);
-  }
-.subscribe-form-email {
-  margin-right: 0px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  width: 340px;
-  height: 52px;
-  font-size: 24px;
-  &::-webkit-input-placeholder,
-  &::-moz-placeholder,
-  &:-moz-placeholder,
-  &:-ms-input-placeholder {
-    font-size: 24px;
-  }
-}
-.subscribe-form__btn {
-  margin-bottom: 20px;
-}
 }

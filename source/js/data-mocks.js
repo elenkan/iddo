@@ -17,7 +17,7 @@
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
     'August', 'September', 'October', 'November', 'December'
   ];
-  
+
   const getRandomDate = () => (Date.now() - window.util.getRandomNumber(MULTIPLIER));
   const getDateProject = (data = new Date(getRandomDate())) => `${months[data.getMonth()]} ${data.getDate()}, ${data.getFullYear()}`;
 
