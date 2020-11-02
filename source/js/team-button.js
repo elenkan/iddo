@@ -9,9 +9,11 @@
       members.forEach((item, index) => {
         if (index >= INDEX_ELEMENT) {
           item.classList.remove('non-visible');
+          teamButton.classList.add('non-visible');
         }
       });
     });
+
   };
 
   showHiddenMember();

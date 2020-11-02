@@ -2,21 +2,17 @@
 (function() {
 
   const fillCircle = (element) => {
-    const array = element.querySelectorAll('svg');
+    const array = Array.from(element.querySelectorAll('svg'));
     array.forEach(item =>
       item.querySelector('circle').classList.add(`skills__img--${item.querySelector('text').textContent}`));
   };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        fillCircle(entry.target);
-      }
-    })
-  }, {
-    threshold: .7
-  })
+ const options = {
+  threshold: 0.7
+ };
 
-  observer.observe(document.querySelector('.skills__statistics'));
+ const observeCircle = entries => entries.forEach(entry => entry.isIntersecting && fillCircle(entry.target));
+ const observer = new IntersectionObserver(observeCircle, options);
+ observer.observe(document.querySelector('.skills__statistics'));
 
 })();

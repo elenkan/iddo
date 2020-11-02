@@ -1,11 +1,11 @@
 .font-awesome {
-  font-family: Font Awesome;
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .white-focus {
   outline: none;
-  box-shadow: 0 0 0 4px black, 0 0 0 5px white;
+  box-shadow: 0 0 0 4px #000000, 0 0 0 5px #ffffff;
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -384,8 +384,8 @@ ul {
 }
 .page-header {
   padding: 0 calc(50% - 585px);
-  padding-bottom: 23px;
   padding-top: 23px;
+  padding-bottom: 23px;
   color: #ffffff;
   background-color: #000000;
   display: flex;
@@ -398,7 +398,6 @@ ul {
   margin-right: 84px;
 }
 .site-list {
-  margin-right: 428px;
   margin-top: 9px;
   margin-left: 42px;
   display: flex;
@@ -406,24 +405,25 @@ ul {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.site-list_item {
+.site-list__item {
   margin-right: 39px;
 }
-.site-list_item a {
+.site-list__item a {
   font-size: 16px;
   line-height: 19px;
   color: #ffffff;
   text-decoration: none;
 }
-.site-list_item a:focus {
+.site-list__item a:focus {
   outline: none;
-  box-shadow: 0 0 0 4px black, 0 0 0 5px white;
+  box-shadow: 0 0 0 4px #000000, 0 0 0 5px #ffffff;
 }
-.page-header__subscribe-link {
+.page-header__signup-link {
   display: block;
   align-self: center;
   width: 90px;
   height: 35px;
+  margin-left: auto;
   padding-top: 7px;
   font-size: 16px;
   line-height: 19px;
@@ -434,9 +434,9 @@ ul {
   border-radius: 10px;
   cursor: pointer;
 }
-.page-header__subscribe-link:focus {
+.page-header__signup-link:focus {
   outline: none;
-  box-shadow: 0 0 0 4px black, 0 0 0 5px white;
+  box-shadow: 0 0 0 4px #000000, 0 0 0 5px #ffffff;
 }
 .information-video {
   position: relative;
@@ -463,18 +463,18 @@ ul {
   top: 100%;
   left: 2px;
   font-size: 16px;
-  font-family: Proxima Nova Regular, Arial, sans-serif;
   line-height: 19px;
+  font-family: Proxima Nova Regular, Arial, sans-serif;
   color: #ca3c3c;
 }
 .information-video__button {
-  margin-right: 36px;
-  margin-top: -79px;
+  position: relative;
   display: block;
   width: 131px;
   height: 131px;
+  margin-top: -79px;
+  margin-right: 36px;
   overflow: hidden;
-  position: relative;
 }
 .information-video__button:focus {
   outline: none;
@@ -482,24 +482,14 @@ ul {
 }
 .information-video__button:after {
   content: "\f01d";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
+  position: absolute;
+  top: -21px;
+  left: 1px;
   font-size: 150px;
   color: #ffffff;
-  position: absolute;
-  left: 1px;
-  top: -21px;
-}
-.shape {
-  background-color: #000000;
-  opacity: 0.502;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 1600px;
-  height: 900px;
-  z-index: 249;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .services {
   position: relative;
@@ -517,13 +507,13 @@ ul {
 }
 .services__title {
   margin-top: 46px;
-  margin-left: -3px;
   margin-right: 30px;
+  margin-left: -3px;
 }
 .services-list {
-  width: 770px;
   display: flex;
   flex-wrap: wrap;
+  width: 770px;
   margin-top: 35px;
   margin-bottom: -2px;
 }
@@ -533,10 +523,6 @@ ul {
   font-family: Proxima Nova Bold, Arial, sans-serif;
   text-transform: uppercase;
 }
-.services-list__title:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px #ca3c3c, 0 0 0 5px #ffffff;
-}
 .services-list__description {
   width: 250px;
   margin-top: -10px;
@@ -545,82 +531,82 @@ ul {
   font-family: Proxima Nova Thin, Arial, sans-serif;
 }
 .services-list__item {
-  width: 370px;
-  padding-left: 134px;
-  margin-right: 30px;
   position: relative;
+  width: 370px;
+  margin-right: 30px;
   margin-bottom: 52px;
+  padding-left: 134px;
 }
 .services-list__item:nth-child(even) {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .services-list__item:first-child:before {
   content: "\f0c2";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   position: absolute;
   top: 16px;
   right: 268px;
-  font-size: 36px;
   display: block;
   width: 100px;
   height: 100px;
+  padding: 27px;
+  font-size: 36px;
+  text-align: center;
   border: 2px solid #ffffff;
   border-radius: 50%;
-  padding: 27px;
-  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .services-list__item:nth-child(2):before {
   content: "\f0f5";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   position: absolute;
   top: 16px;
   right: 268px;
-  font-size: 36px;
   display: block;
   width: 100px;
   height: 100px;
+  padding: 27px;
+  font-size: 36px;
+  text-align: center;
   border: 2px solid #ffffff;
   border-radius: 50%;
-  padding: 27px;
-  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .services-list__item:nth-child(3):before {
   content: "\f0e7";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   position: absolute;
   top: 16px;
   right: 268px;
-  font-size: 36px;
   display: block;
   width: 100px;
   height: 100px;
+  padding: 27px;
+  font-size: 36px;
+  text-align: center;
   border: 2px solid #ffffff;
   border-radius: 50%;
-  padding: 27px;
-  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .services-list__item:last-child:before {
   content: "\f0e3";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   position: absolute;
   top: 16px;
   right: 268px;
-  font-size: 36px;
   display: block;
   width: 100px;
   height: 100px;
+  padding: 27px;
+  font-size: 36px;
+  text-align: center;
   border: 2px solid #ffffff;
   border-radius: 50%;
-  padding: 27px;
-  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .icon-list {
   position: absolute;
@@ -642,9 +628,9 @@ ul {
   margin-right: 0;
 }
 .icon-list__item a {
-  text-decoration: none;
   display: block;
   width: 40px;
+  text-decoration: none;
 }
 .icon-list__item a:focus {
   outline: none;
@@ -652,63 +638,63 @@ ul {
 }
 .icon-list__link-bulb:after {
   content: "\f0eb";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 36px;
   display: block;
-  color: #ca3c3c;
+  font-size: 36px;
   text-align: center;
+  color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .icon-list__link-globe:after {
   content: "\f0ac";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 36px;
   display: block;
-  color: #ca3c3c;
+  font-size: 36px;
   text-align: center;
+  color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .icon-list__link-camera:after {
   content: "\f083";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 36px;
   display: block;
-  color: #ca3c3c;
+  font-size: 36px;
   text-align: center;
+  color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .icon-list__link-spanner:after {
   content: "\f0ad";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 36px;
   display: block;
-  color: #ca3c3c;
+  font-size: 36px;
   text-align: center;
+  color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .icon-list__link-mic:after {
   content: "\f130";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 36px;
   display: block;
-  color: #ca3c3c;
+  font-size: 36px;
   text-align: center;
+  color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .icon-list__link-banknote:after {
   content: "\f0d6";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 36px;
   display: block;
-  color: #ca3c3c;
+  font-size: 36px;
   text-align: center;
+  color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .portfolio {
   padding: 0 calc(50% - 585px);
@@ -751,8 +737,8 @@ ul {
   border-radius: 10px;
 }
 .portfolio-list__button--active {
-  background-color: #ca3c3c;
   color: #ffffff;
+  background-color: #ca3c3c;
 }
 .portfolio-list__button:focus {
   outline: none;
@@ -762,11 +748,11 @@ ul {
   margin-bottom: 141px;
 }
 .show-button {
+  position: relative;
   width: 31px;
   height: 31px;
   background-color: transparent;
   border: none;
-  position: relative;
 }
 .show-button:focus {
   outline: none;
@@ -774,14 +760,14 @@ ul {
 }
 .show-button:after {
   content: "\f055";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  color: #ca3c3c;
-  font-size: 36px;
   position: absolute;
-  left: 0;
   top: -4px;
+  left: 0;
+  font-size: 36px;
+  color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .project-list {
   padding: 0 calc(50% - 585px);
@@ -791,32 +777,28 @@ ul {
   justify-content: flex-start;
 }
 .project-list__item {
+  position: relative;
   width: 370px;
   height: 370px;
-  margin-bottom: 30px;
-  position: relative;
   margin-right: 30px;
+  margin-bottom: 30px;
   background-color: #cccccc;
 }
 .project-list__item:nth-child(3n) {
-  margin-right: 0px;
+  margin-right: 0;
 }
-.project-list__item:hover .project-list__info,
-.project-list__item:focus .project-list__info {
-  align-items: center;
+.project-list__item:hover .project-list__info {
   position: absolute;
   bottom: 0;
-  height: 100px;
+  display: block;
+  align-items: center;
   width: 370px;
+  height: 100px;
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
-.project-list__item:focus {
-  outline: none;
-  box-shadow: 0 0 0 5px #ebebeb, 0 0 0 6px #ca3c3c;
 }
 .project-list__info {
   display: none;
@@ -835,10 +817,10 @@ ul {
 .project-list__author {
   display: block;
   margin-bottom: 29px;
-  text-align: center;
   font-size: 14px;
   line-height: 14px;
   font-family: Proxima Nova Thin, Arial, sans-serif;
+  text-align: center;
   color: #898989;
 }
 .feedback {
@@ -869,9 +851,9 @@ ul {
 .feedback-post__user-name {
   margin-top: -4px;
   font-style: normal;
-  font-family: Proxima Nova Bold, Arial, sans-serif;
   font-size: 16px;
   line-height: 41px;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   text-transform: uppercase;
 }
 .feedback-post__user-img {
@@ -883,8 +865,8 @@ ul {
 }
 .feedback__slider {
   position: relative;
-  left: 6px;
   bottom: 22px;
+  left: 6px;
   padding-bottom: 8px;
   list-style: none;
   display: flex;
@@ -928,21 +910,17 @@ ul {
 }
 .team-list__item {
   position: relative;
-  margin-right: 40px;
   width: 360px;
+  margin-right: 40px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .team-list__item:nth-child(3n) {
-  margin-right: 0px;
+  margin-right: 0;
 }
-.team-list__item:focus {
-  outline: none;
-}
-.team-list__item:hover .team-list__contacts,
-.team-list__item:focus .team-list__contacts {
+.team-list__item:hover .team-list__contacts {
   position: absolute;
   top: 62px;
   left: 140px;
@@ -981,10 +959,6 @@ ul {
   font-family: Proxima Nova Bold, Arial, sans-serif;
   color: #ca3c3c;
   text-transform: uppercase;
-}
-.team-list__member-name:focus {
-  outline: none;
-  box-shadow: 0 0 0 5px #ffffff, 0 0 0 6px #ca3c3c;
 }
 .team__title {
   width: 370px;
@@ -1027,49 +1001,49 @@ ul {
   text-decoration: none;
 }
 .team-list__twitter-contact:before {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding-top: 11px;
+  background-color: #ca3c3c;
+  border-radius: 50%;
   content: "\f099";
   font-size: 24px;
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  color: #ffffff;
   text-align: center;
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: #ca3c3c;
-  border-radius: 50%;
-  padding-top: 11px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .team-list__facebook-contact:before {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding-top: 11px;
+  background-color: #ca3c3c;
+  border-radius: 50%;
   content: "\f09a";
   font-size: 24px;
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  color: #ffffff;
   text-align: center;
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: #ca3c3c;
-  border-radius: 50%;
-  padding-top: 11px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .team-list__instagram-contact:before {
-  content: "\f16d";
-  font-size: 24px;
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  color: #ffffff;
-  text-align: center;
   display: block;
   width: 50px;
   height: 50px;
+  padding-top: 11px;
   background-color: #ca3c3c;
   border-radius: 50%;
-  padding-top: 11px;
+  content: "\f16d";
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .statistics {
   padding: 0 calc(50% - 585px);
@@ -1087,54 +1061,50 @@ ul {
 .statistics-list__item {
   align-items: center;
   width: 270px;
+  padding-top: 11px;
   line-height: 41px;
   font-family: Proxima Nova Regular, Arial, sans-serif;
   color: #ffffff;
-  padding-top: 11px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.statistics-list__item:focus {
-  outline: none;
-  box-shadow: 0 0 0 5px #666666, 0 0 0 6px #ffffff;
-}
 .statistics-list__item:first-child:before {
   content: "\f06b";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 72px;
   margin-bottom: 46px;
   margin-left: 5px;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .statistics-list__item:nth-child(2):before {
   content: "\f0e6";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 72px;
   margin-bottom: 46px;
   margin-left: 5px;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .statistics-list__item:nth-child(3):before {
   content: "\f0f4";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 72px;
   margin-bottom: 46px;
   margin-left: 5px;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .statistics-list__item:last-child:before {
   content: "\f091";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 72px;
   margin-bottom: 46px;
   margin-left: 5px;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .statistics-list__number {
   margin-top: 14px;
@@ -1144,12 +1114,11 @@ ul {
   font-family: Proxima Nova Thin, Arial, sans-serif;
 }
 .statistics-list__text {
-  font-weight: bold;
+  margin-left: 0;
   font-size: 18px;
   line-height: 41px;
-  font-family: Proxima Nova Regular, Arial, sans-serif;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   text-transform: uppercase;
-  margin-left: 0;
 }
 .skills {
   position: relative;
@@ -1185,9 +1154,9 @@ ul {
 .skills__description {
   margin-top: -19px;
   margin-left: 100px;
-  font-family: Proxima Nova Thin, Arial, sans-serif;
   font-size: 14px;
   line-height: 23px;
+  font-family: Proxima Nova Thin, Arial, sans-serif;
 }
 .skills__description:first-of-type {
   margin-bottom: 25px;
@@ -1201,78 +1170,78 @@ ul {
   justify-content: normal;
 }
 .skills-list__item {
-  margin-bottom: 11px;
   position: relative;
+  margin-bottom: 11px;
 }
-.skills-list__item:first-child:before {
+.skills-list__item:first-child .skills-list__btn:before {
   content: "\f135";
-  font-size: 24px;
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  color: #898989;
   position: absolute;
   top: 10px;
   left: 21px;
   z-index: 10;
+  font-size: 24px;
+  color: #898989;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
-.skills-list__item:nth-child(2):before {
+.skills-list__item:nth-child(2) .skills-list__btn:before {
   content: "\f13e";
-  font-size: 24px;
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  color: #898989;
   position: absolute;
   top: 10px;
   left: 21px;
   z-index: 10;
+  font-size: 24px;
+  color: #898989;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
-.skills-list__item:nth-child(3):before {
+.skills-list__item:nth-child(3) .skills-list__btn:before {
   content: "\f124";
-  font-size: 24px;
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  color: #898989;
   position: absolute;
   top: 10px;
   left: 21px;
   z-index: 10;
+  font-size: 24px;
+  color: #898989;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
-.skills-list__item:nth-child(4):before {
+.skills-list__item:nth-child(4) .skills-list__btn:before {
   content: "\f095";
-  font-size: 24px;
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  color: #898989;
   position: absolute;
   top: 10px;
   left: 21px;
   z-index: 10;
+  font-size: 24px;
+  color: #898989;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
-.skills-list__item:nth-child(5):before {
+.skills-list__item:nth-child(5) .skills-list__btn:before {
   content: "\f02d";
-  font-size: 24px;
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  color: #898989;
   position: absolute;
   top: 10px;
   left: 21px;
   z-index: 10;
+  font-size: 24px;
+  color: #898989;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .skills-list__item[open] .skills-list__btn {
   color: #ca3c3c;
 }
-.skills-list__item[open]:before {
+.skills-list__item[open] .skills-list__btn:before {
   color: #ca3c3c;
 }
 .skills-list__item[open] .skills-list__sign {
-  left: 286px;
   bottom: 13px;
+  left: 286px;
   width: 6px;
   height: 1px;
   background-color: #ca3c3c;
@@ -1282,10 +1251,11 @@ ul {
 }
 .skills-list__btn {
   position: relative;
+  display: block;
   width: 370px;
   height: 49px;
-  padding-left: 59px;
   padding-top: 14px;
+  padding-left: 59px;
   font-size: 14px;
   line-height: 22px;
   font-family: Proxima Nova Bold, Arial, sans-serif;
@@ -1294,6 +1264,7 @@ ul {
   background-color: #ffffff;
   border: 1px solid #ebebeb;
   border-radius: 10px;
+  cursor: pointer;
 }
 .skills-list__btn::-webkit-details-marker {
   display: none;
@@ -1334,10 +1305,9 @@ ul {
   text-align: right;
 }
 .skills__img text {
-  font-weight: bold;
   font-size: 18px;
   line-height: 60px;
-  font-family: Proxima Nova Regular, Arial, sans-serif;
+  font-family: Proxima Nova Bold, Arial, sans-serif;
   color: #ca3c3c;
 }
 .skills__information-block {
@@ -1362,43 +1332,43 @@ ul {
 @-webkit-keyframes fill-75-percent {
   to {
     stroke: #ca3c3c;
-    stroke-width: 10;
     stroke-dasharray: 400.35 133;
+    stroke-width: 10;
   }
 }
 @keyframes fill-75-percent {
   to {
     stroke: #ca3c3c;
-    stroke-width: 10;
     stroke-dasharray: 400.35 133;
+    stroke-width: 10;
   }
 }
 @-webkit-keyframes fill-25-percent {
   to {
     stroke: #ca3c3c;
-    stroke-width: 10;
     stroke-dasharray: 133.45 400;
+    stroke-width: 10;
   }
 }
 @keyframes fill-25-percent {
   to {
     stroke: #ca3c3c;
-    stroke-width: 10;
     stroke-dasharray: 133.45 400;
+    stroke-width: 10;
   }
 }
 @-webkit-keyframes fill-50-percent {
   to {
     stroke: #ca3c3c;
-    stroke-width: 10;
     stroke-dasharray: 266.9 266.9;
+    stroke-width: 10;
   }
 }
 @keyframes fill-50-percent {
   to {
     stroke: #ca3c3c;
-    stroke-width: 10;
     stroke-dasharray: 266.9 266.9;
+    stroke-width: 10;
   }
 }
 .skills__img--75 {
@@ -1426,9 +1396,9 @@ ul {
   margin-right: 121px;
   margin-left: -4px;
   font-size: 36px;
-  color: #ffffff;
   line-height: 41px;
   font-family: Proxima Nova Thin, Arial, sans-serif;
+  color: #ffffff;
   background-color: transparent;
   border: none;
 }
@@ -1440,7 +1410,7 @@ ul {
 }
 .subscribe-form-email::-moz-placeholder {
   font-size: 36px;
-  line-height: 41px;
+  line-height: 68px;
   font-family: Proxima Nova Thin, Arial, sans-serif;
   color: #ffffff;
 }
@@ -1539,20 +1509,16 @@ ul {
 .contacts__adress,
 .contacts__phone-and-email,
 .contacts__phone-and-email a {
+  font-style: normal;
   font-size: 16px;
   line-height: 30px;
   font-family: Proxima Nova Regular, Arial, sans-serif;
   color: #898989;
-  font-style: normal;
 }
 .contacts__adress {
-  margin-bottom: 0;
-  margin-top: 16px;
   width: 332px;
-}
-.contacts__adress:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px #ebebeb, 0 0 0 4px #ca3c3c;
+  margin-top: 16px;
+  margin-bottom: 0;
 }
 .contacts__phone-and-email {
   margin-top: 0;
@@ -1589,43 +1555,43 @@ ul {
 }
 .contact-form__label-email:before {
   content: "\f0e0";
-  font-size: 16px;
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   position: absolute;
   top: 17px;
   right: 365px;
   z-index: 10;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .contact-form__label-name:before {
   content: "\f007";
-  font-size: 16px;
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   position: absolute;
   top: 17px;
   right: 339px;
   z-index: 10;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .contact-form__label-message:before {
   content: "\f040";
-  font-size: 16px;
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   position: absolute;
   top: 47px;
   right: 768px;
   z-index: 10;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .contact-form__input {
   position: relative;
   width: 370px;
   height: 50px;
-  padding-left: 33px;
   padding-top: 4px;
+  padding-left: 33px;
   border: 2px solid #363636;
 }
 .contact-form__input:first-of-type {
@@ -1680,8 +1646,8 @@ ul {
   color: transparent;
 }
 .contact-form__input:focus {
-  outline: none;
   border: 2px solid #ca3c3c;
+  outline: none;
 }
 a .contact-form__input:focus + label {
   display: none;
@@ -1691,8 +1657,8 @@ a .contact-form__input:focus + label {
   align-self: flex-end;
   width: 370px;
   height: 80px;
-  padding-left: 43px;
   padding-top: 5px;
+  padding-left: 43px;
   font-size: 16px;
   line-height: 41px;
   font-family: Proxima Nova Regular, Arial, sans-serif;
@@ -1704,14 +1670,14 @@ a .contact-form__input:focus + label {
 }
 .contact-form__btn:before {
   content: "\f05d";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 36px;
   position: absolute;
   top: 21px;
   left: 140px;
   z-index: 10;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .contact-form__btn:focus {
   outline: none;
@@ -1737,67 +1703,67 @@ a .contact-form__input:focus + label {
 }
 .social-list__twitter:before {
   content: "\f099";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   font-size: 16px;
   color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .social-list__facebook:before {
   content: "\f09a";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   font-size: 16px;
   color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .social-list__google-plus:before {
   content: "\f0d5";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   font-size: 16px;
   color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .social-list__pintrest:before {
   content: "\f0d2";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   font-size: 16px;
   color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .social-list__instagram:before {
   content: "\f16d";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   font-size: 16px;
   color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .social-list__youtube:before {
   content: "\f16a";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   font-size: 16px;
   color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .social-list__skype:before {
   content: "\f17e";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   font-size: 16px;
   color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .social-list__dribbble:before {
   content: "\f17d";
-  font-family: Font Awesome;
-  font-weight: normal;
-  font-style: normal;
   font-size: 16px;
   color: #ca3c3c;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .page-footer {
   align-items: center;
@@ -1816,7 +1782,7 @@ a .contact-form__input:focus + label {
   justify-content: space-between;
 }
 .site-logo--footer {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .page-footer__rights {
   margin-bottom: 0;
@@ -1839,11 +1805,11 @@ a .contact-form__input:focus + label {
 }
 .page-footer__arrow:before {
   content: "";
+  position: relative;
+  left: 1px;
   display: block;
   width: 13px;
   height: 13px;
-  position: relative;
-  left: 1px;
   background-color: transparent;
   border-top: 2px solid #ca3c3c;
   border-right: transparent;
@@ -1852,11 +1818,11 @@ a .contact-form__input:focus + label {
   transform: rotate(45deg);
 }
 .modal-signup {
-  position: absolute;
-  top: 140px;
-  left: calc(50% - 200px);
+  position: fixed;
+  top: 89px;
+  left: calc(50% - 168px);
   display: none;
-  width: 335px;
+  width: 336px;
   height: 380px;
   padding-top: 20px;
   background-color: #ffffff;
@@ -1959,9 +1925,9 @@ a .signup-form__input:focus + label {
   left: 39px;
   z-index: 10;
   font-size: 36px;
-  font-family: Font Awesome;
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
+  font-family: Font Awesome;
 }
 .signup-form__btn:focus {
   outline: none;

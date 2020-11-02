@@ -17,6 +17,7 @@
 .project-list__image {
   width: 370px;
   height: 370px;
+
   object-fit: cover;
 }
 
@@ -45,38 +46,43 @@
   border-radius: 10px;
 
   &--active {
-    background-color: @main-red-color;
     color: @white-color;
+
+    background-color: @main-red-color;
   }
 
   &:focus {
-      outline: none;
-      box-shadow: 0 0 0 4px @light-grey-color, 0 0 0 5px @main-red-color;
-    }
+    outline: none;
+    box-shadow: 0 0 0 4px @light-grey-color, 0 0 0 5px @main-red-color;
+  }
 }
 
 .portfolio__button {
   margin-bottom: 141px;
 }
 .show-button {
+  position: relative;
+
   width: 31px;
   height: 31px;
+
   background-color: transparent;
   border: none;
-    position: relative;
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 5px @light-grey-color, 0 0 0 6px @main-red-color;
-    }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px @light-grey-color, 0 0 0 6px @main-red-color;
+  }
 
   &:after {
     content: "\f055";
-    .font-awesome();
-    color: @main-red-color;
-    font-size: 36px;
     position: absolute;
-    left: 0;
     top: -4px;
+    left: 0;
+
+    font-size: 36px;
+    color: @main-red-color;
+
+    .font-awesome();
   }
 }
 
@@ -87,38 +93,33 @@
 }
 
 .project-list__item {
+  position: relative;
+
   width: 370px;
   height: 370px;
-  margin-bottom: 30px;
-  position: relative;
   margin-right: 30px;
+  margin-bottom: 30px;
 
   background-color: @light-grey-bg-color;
 
   &:nth-child(3n) {
-    margin-right: 0px;
+    margin-right: 0;
   }
 
-  &:hover .project-list__info,
-  &:focus .project-list__info,
-   {
-    align-items: center;
+  &:hover .project-list__info {
     position: absolute;
-    bottom:0;
-    height: 100px;
+    bottom: 0;
+
+    display: block;
+    align-items: center;
     width: 370px;
+    height: 100px;
 
     background-color: @white-color;
 
     .flex-mixin(@justify-content: center);
   }
-
-  &:focus {
-      outline: none;
-      box-shadow: 0 0 0 5px @light-grey-color, 0 0 0 6px @main-red-color;
-    }
 }
-
 
 .project-list__info {
   display: none;
@@ -140,10 +141,10 @@
 .project-list__author {
   display: block;
   margin-bottom: 29px;
-  text-align: center;
 
   font-size: 14px;
   line-height: 14px;
   font-family: @font-thin;
+  text-align: center;
   color: @author-text-color;
 }

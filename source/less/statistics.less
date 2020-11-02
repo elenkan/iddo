@@ -5,7 +5,7 @@
 }
 
 .statistics-list {
-  padding-top:84px;
+  padding-top: 84px;
   padding-bottom: 66px;
 
   list-style: none;
@@ -16,19 +16,13 @@
 .statistics-list__item {
   align-items: center;
   width: 270px;
+  padding-top: 11px;
 
   line-height: 41px;
   font-family: @font;
   color: @white-color;
-  padding-top: 11px;
 
   .flex-mixin(@flex-direction: column);
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 5px @main-grey-color, 0 0 0 6px @white-color;
-
-  }
 
   &:first-child:before {
     .statistics-list-icon("\f06b");
@@ -57,11 +51,10 @@
 }
 
 .statistics-list__text {
-  font-weight: bold;
+  margin-left: 0;
+
   font-size: 18px;
   line-height: 41px;
-  font-family: @font;
+  font-family: @font-bold;
   text-transform: uppercase;
-  margin-left: 0;
 }
-
