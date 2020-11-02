@@ -11,7 +11,7 @@
   background-color: @white-color;
   border-top: 12px solid @main-red-color;
   border-radius: 10px;
-  box-shadow: 0 0 0 9999px rgba(202, 60, 60, 0.3);
+  box-shadow: 0 0 0 9999px @transparent-red-color;
   form {
     align-items: center;
     width: 335px;
@@ -147,12 +147,5 @@
     border-radius: 10px;
     outline: none;
     box-shadow: 0 0 0 3px @white-color, 0 0 0 4px @main-red-color;
-  }
-}
-
-@media (max-width: @mobile-width) {
-  .modal-signup {
-    left: calc(50% - 160px);
-    width: 320px;
   }
 }

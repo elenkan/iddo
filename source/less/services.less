@@ -17,15 +17,14 @@
 
 .services__title {
   margin-top: 46px;
-  margin-left: -3px;
   margin-right: 30px;
+  margin-left: -3px;
 }
 
 .services-list {
-  width: 770px;
-
   display: flex;
   flex-wrap: wrap;
+  width: 770px;
   margin-top: 35px;
   margin-bottom: -2px;
 
@@ -40,6 +39,7 @@
   &__description {
     width: 250px;
     margin-top: -10px;
+
     font-size: 14px;
     line-height: 22px;
     font-family: @font-thin;
@@ -47,22 +47,22 @@
 }
 
 .services-list__item {
+  position: relative;
 
   width: 370px;
+  margin-right: 30px;
+  margin-bottom: 52px;
   padding-left: 134px;
-    margin-right: 30px;
-    position: relative;
-    margin-bottom: 52px;
 
   &:nth-child(even) {
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   &:first-child:before {
     .feature-icon ("\f0c2");
   }
   &:nth-child(2):before {
-   .feature-icon ("\f0f5");
+    .feature-icon ("\f0f5");
   }
   &:nth-child(3):before {
     .feature-icon ("\f0e7");
@@ -95,10 +95,11 @@
   }
 
   & a {
-    text-decoration: none;
     display: block;
     width: 40px;
-      &:focus {
+
+    text-decoration: none;
+    &:focus {
       outline: none;
       box-shadow: 0 0 0 4px @white-color, 0 0 0 5px @main-red-color;
     }
@@ -107,67 +108,32 @@
 
 .icon-list__link-bulb:after {
   display: block;
+
   .service-icon-list("\f0eb");
 }
 .icon-list__link-globe:after {
   display: block;
+
   .service-icon-list("\f0ac");
 }
 
 .icon-list__link-camera:after {
   display: block;
+
   .service-icon-list("\f083");
 }
 .icon-list__link-spanner:after {
   display: block;
+
   .service-icon-list("\f0ad");
 }
 .icon-list__link-mic:after {
   display: block;
+
   .service-icon-list("\f130");
 }
 .icon-list__link-banknote:after {
   display: block;
+
   .service-icon-list("\f0d6");
-}
-
-@media (max-width: @mobile-width) {
-  .services {
-    padding: 0 calc(50% - 190px);
-    justify-content: center;
-
-    &__title {
-      margin: 0 auto;
-      padding-top: 36px;
-    }
-  }
-  .services-list {
-    width: 360px;
-    margin-top: 35px;
-
-    &__description {
-      width: 235px;
-    }
-  }
-
-  .services-list__item {
-      width: 360px;
-
-      &:first-child:before,
-      &:nth-child(2):before,
-      &:nth-child(3):before,
-      &:last-child:before {
-        right: 245px;
-      }
-    }
-
-    .icon-list {
-      left: 19px;
-      top: 934px;
-      padding: 0 calc(50% - 190px);
-      &__item {
-        margin-right: 18px;
-      }
-    }
-  
 }

@@ -7,11 +7,7 @@
   const changeSliderVisible = (evt)=> {
     window.util.changeButtonStatus(evt ,sliderButtons,'feedback__button-active');
     let indexElement = sliderButtons.indexOf(evt.target);
-    sliders.forEach(item => {
-      if(!item.classList.contains('non-visible')){
-        item.classList.add('non-visible');
-      }
-    });
+    sliders.forEach(item => !item.classList.contains('non-visible') && item.classList.add('non-visible'));
     sliders[indexElement].classList.remove('non-visible');
   };
 

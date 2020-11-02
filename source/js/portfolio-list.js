@@ -5,7 +5,6 @@
   const allFilterBtn = document.querySelector('.js-portfolio-list__button--all');
   const VISIBLE_LIST_LENGTH = 6;
   const INDEX_ELEMENT = 6;
-  const NUMBER_OPEN_ELEMENT = 5;
   const portfolioButtonList = Array.from(document.querySelectorAll('.portfolio-list__button'));
   let worksData = window.dataMocks.works;
 
@@ -13,35 +12,17 @@
     allFilterBtn.click();
   });
 
-const showHiddenElement = (button, list) => {//Проверить кнопку, не сразу скрывается
-  window.util.changeVisibleButton (button, list);
- 
-  button.addEventListener('click', function() {
-    // let numberHiddenElement = 0;
-    //  list
-    // .forEach(item => item.classList.contains('non-visible') && (numberHiddenElement += 1));
+const showHiddenElement = (list) => {
+  window.util.changeVisibleButton (portfolioButton, list, VISIBLE_LIST_LENGTH);
 
-
-    // let indexFirstElement = list.length - numberHiddenElement;
-    // let indexLastElement = indexFirstElement + NUMBER_OPEN_ELEMENT;
-    // console.log(numberHiddenElement);
-    // for (let j = indexFirstElement; j <= indexLastElement; j++) {
-    //   if(list[j]) {list[j].classList.remove('non-visible');}
-      
-    //   if (!list[list.length - 1].classList.contains('non-visible')) {
-    //     button.classList.add('non-visible');
-    //   }
-    // }
-
-    let filteredList = list
+  portfolioButton.addEventListener('click', function() {
+    list
     .filter(item => item.classList.contains('non-visible'))
-    .forEach((item, index) => index < 6 && item.classList.remove('non-visible'));
+    .forEach((item, index) => index < INDEX_ELEMENT && item.classList.remove('non-visible'));
 
-filteredList = list.filter(item => item.classList.contains('non-visible'));
-    if(!filteredList.length) {
-      button.classList.add('non-visible');
+    if(!list[list.length - 1].classList.contains('non-visible')) {
+      portfolioButton.classList.add('non-visible');
     }
-
   });
 
 };
@@ -68,7 +49,8 @@ filteredList = list.filter(item => item.classList.contains('non-visible'));
       }
     });
 
-    showHiddenElement(portfolioButton, projects);
+    showHiddenElement(projects);
+
   };
 
 const renderPortfolioList = (evt)=> {

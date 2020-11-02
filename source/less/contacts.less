@@ -9,27 +9,27 @@
 .contacts__adress,
 .contacts__phone-and-email,
 .contacts__phone-and-email a {
+  font-style: normal;
   font-size: 16px;
   line-height: 30px;
   font-family: @font;
   color: @author-text-color;
-  font-style: normal;
 }
 
 .contacts__adress {
-  margin-bottom: 0;
-  margin-top: 16px;
   width: 332px;
+  margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .contacts__phone-and-email {
   margin-top: 0;
   & a {
     text-decoration: none;
-      &:focus {
+    &:focus {
       outline: none;
       box-shadow: 0 0 0 3px @light-grey-color, 0 0 0 4px @main-red-color;
-  }
+    }
   }
 }
 
@@ -59,7 +59,7 @@
   }
 
   &__label-email:before {
-  .contacts-list-icon("\f0e0", 17px, 365px);
+    .contacts-list-icon("\f0e0", 17px, 365px);
   }
 
   &__label-name:before {
@@ -76,8 +76,8 @@
 
   width: 370px;
   height: 50px;
-  padding-left: 33px;
   padding-top: 4px;
+  padding-left: 33px;
 
   border: 2px solid @darken-grey-color;
 
@@ -143,8 +143,8 @@
   }
 
   &:focus {
-      outline: none;
-      border: 2px solid @main-red-color;
+    border: 2px solid @main-red-color;
+    outline: none;
   }a
   &:focus + label {
     display: none;
@@ -157,8 +157,8 @@
   align-self: flex-end;
   width: 370px;
   height: 80px;
-  padding-left: 43px;
   padding-top: 5px;
+  padding-left: 43px;
 
   font-size: 16px;
   line-height: 41px;
@@ -172,16 +172,18 @@
 
   &:before {
     content: "\f05d";
-    .font-awesome();
-    font-size: 36px;
     position: absolute;
     top: 21px;
     left: 140px;
     z-index: 10;
+
+    font-size: 36px;
+
+    .font-awesome();
   }
   &:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px @light-grey-color, 0 0 0 4px @main-red-color;
+    outline: none;
+    box-shadow: 0 0 0 3px @light-grey-color, 0 0 0 4px @main-red-color;
   }
 }
 
@@ -197,11 +199,10 @@
 
   & a {
     text-decoration: none;
-  &:focus {
+    &:focus {
       outline: none;
       box-shadow: 0 0 0 3px @light-grey-color, 0 0 0 4px @main-red-color;
-  }
-
+    }
   }
 }
 
@@ -229,52 +230,3 @@
 .social-list__dribbble:before {
   .social-list-icon("\f17d");
 }
-
-@media (max-width: @mobile-width) {
-
-  .contacts {
-    padding: 0 calc(50% - 190px);
-    align-items: center;
-
-    &__title {
-  width: 270px;
-  margin: 0 auto;
-  padding-top: 36px;
-    }
-    &__phone-and-email {
-      width: 332px;
-    }
-  }
-
-  .contact-form {
-    justify-content: center;
-    margin-bottom: 70px;
-    &__btn {
-      width: 320px;
-
-      &:before {
-        left: 117px;
-      }
-    }
-  }
-  .contact-form__input {
-    width: 320px;
-    margin-right: 0px;
-    margin-bottom: 30px;
-    &:first-of-type {
-      margin-right: 0px;
-    }
-    &--message {
-      margin-top: 0px;
-    }
-  }
-  .contact-form__label-email:before,
-  .contact-form__label-name:before,
-  .contact-form__label-message:before {
-    right: 300px;
-  }
-  .social-list {
-    width: 320px;
-  }
-}
-
