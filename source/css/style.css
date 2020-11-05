@@ -493,7 +493,6 @@ ul {
 }
 .services {
   position: relative;
-  min-height: 350px;
   margin-bottom: 150px;
   padding: 0 calc(50% - 585px);
   padding-bottom: 5px;
@@ -515,7 +514,7 @@ ul {
   flex-wrap: wrap;
   width: 770px;
   margin-top: 35px;
-  margin-bottom: -2px;
+  margin-bottom: -42px;
 }
 .services-list__title {
   font-size: 16px;
@@ -609,10 +608,9 @@ ul {
   font-family: Font Awesome;
 }
 .icon-list {
-  position: absolute;
-  top: 413px;
-  left: 67px;
-  padding: 0 calc(50% - 585px);
+  position: relative;
+  top: 100px;
+  left: 66px;
   list-style: none;
   display: flex;
   flex-direction: row;
