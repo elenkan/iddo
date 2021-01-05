@@ -4,6 +4,6 @@
 
 Команда **npm run build** в терминале в ветке **master** запустит сборку проекта на Gulp.
 
-Команда **npm run dev** в ветке **feature-branch-7** запустит режим "разработка" на webpack.
+Команда **npm run dev** в ветке **feature-branch-7** запустит режим "разработка" на Webpack.
 
-Команда **npm run build** в ветке **feature-branch-7** запустит сборку проекта на webpack.
+Команда **npm run build** в ветке **feature-branch-7** запустит сборку проекта на Webpack.
