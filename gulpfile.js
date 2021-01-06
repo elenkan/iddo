@@ -13,8 +13,6 @@ const del = require('del');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const terser = require('gulp-terser');
-const browserify = require('gulp-browserify');
-const babelify = require('babelify');
 
 gulp.task('css', () => {
   return gulp.src('source/less/style.less')
@@ -70,10 +68,6 @@ gulp.task('javascript', () => {
     .pipe(sourcemap.init())
     .pipe(babel())
     .pipe(concat('bundle.js'))
-    .pipe(browserify({
-      transform: [
-      babelify.configure({ presets: ['@babel/preset-env']})
-      ]}))
     .pipe(terser())
     .pipe(rename('bundle.min.js'))
     .pipe(sourcemap.write('.'))
