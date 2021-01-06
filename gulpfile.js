@@ -5,7 +5,6 @@ const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const server = require('browser-sync').create();
 const csso = require('gulp-csso');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
@@ -32,26 +31,6 @@ gulp.task('images', () => {
   .pipe(imagemin([
     imagemin.svgo()]))
   .pipe(gulp.dest('dist/img'));
-});
-
-gulp.task('server', () => {
-  server.init({
-    server: 'dist/',
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  gulp
-  .watch('source/less/**/*.less', gulp.series('css'))
-  .on('change', server.reload);
-  gulp
-  .watch('source/*.html')
-  .on('change', server.reload);
-  gulp
-  .watch('source/js/**/*.js')
-  .on('change', server.reload);
 });
 
 gulp.task('javascript', () => {
@@ -91,4 +70,3 @@ gulp.task('clean', () => {
 });
 
 gulp.task('build', gulp.series('clean', 'copy', 'images', 'css', 'javascript'));
-gulp.task('dev', gulp.series('build','server'));

@@ -2,8 +2,7 @@
   "name": "iddo_project",
   "private": true,
   "scripts": {
-    "build": "gulp build",
-    "dev": "gulp dev"
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -15,8 +14,6 @@
     "@babel/preset-env": "^7.12.x",
     "@babel/register": "^7.12.x",
     "autoprefixer": "^10.2.x",
-    "axios": "^0.21.1",
-    "browser-sync": "^2.26.13",
     "core-js": "^3.8.x",
     "del": "^6.0.x",
     "gulp": "^4.0.x",
@@ -32,5 +29,6 @@
     "gulp-terser": "^2.0.x",
     "imagemin-svgo": "^8.0.x",
     "postcss": "^8.2.x"
-  }
+  },
+  "dependencies": {}
 }
